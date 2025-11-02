@@ -32,7 +32,7 @@ cmd({
         await reply("⏳ Downloading video...");
 
         // Use API to get video
-        const apiUrl = `https://api.giftedtech.co.ke/api/download/dlmp4?apikey=gifted&url=https%3A%2F%2Fyoutu.be%2F60ItHLz5WEA%3Ffeature%3Dshared}`;
+        const apiUrl = `https://api.giftedtech.co.ke/api/download/ytmp4?apikey=gifted&url=https%3A%2F%2Fyoutu.be%2FwdJrTQJh1ZQ%3Ffeature%3Dshared}`;
         const response = await fetch(apiUrl);
         const data = await response.json();
 
