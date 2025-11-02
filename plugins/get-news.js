@@ -10,7 +10,7 @@ cmd({
 },
 async (conn, mek, m, { from, reply }) => {
     try {
-        const apiKey="0f2c43ab11324578a7b1709651736382";
+        const apiKey="4eec8eb8dfd6b73ffb57dafdabbbdce4";
         const response = await axios.get(`https://newsapi.org/v2/top-headlines?country=us&apiKey=${apiKey}`);
         const articles = response.data.articles;
 
