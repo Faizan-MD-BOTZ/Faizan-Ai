@@ -5,7 +5,7 @@ function convertToBool(text, fault = 'true') {
     return text === fault ? true : false;
 }
 module.exports = {
-SESSION_ID: process.env.SESSION_ID || "ANAYAT-AI~eyJub2lzZUtleSI6eyJwcml2YXRlIjp7InR5cGUiOiJCdWZmZXIiLCJkYXRhIjoiV0cwdldrdVBsRVVpMmplRnBBai9JMzRxUHppU0N6U3crNGRIckpHS1cwaz0ifSwicHVibGljIjp7InR5cGUiOiJCdWZmZXIiLCJkYXRhIjoieEU2NDhhaTg5aXBXSjlsQWYzMlB6K2UrVHpjVm1HeEhFVVNTVld2Mk8xRT0ifX0sInBhaXJpbmdFcGhlbWVyYWxLZXlQYWlyIjp7InByaXZhdGUiOnsidHlwZSI6IkJ1ZmZlciIsImRhdGEiOiJ3QWhueHlTUUZDR25RREc0dDNYcEdYS0dlNVVXaHl0M0V6VW5KTlZDN1gwPSJ9LCJwdWJsaWMiOnsidHlwZSI6IkJ1ZmZlciIsImRhdGEiOiJQVEVyc1pIcmFNRFE3aVpuRjFvcXE3UVRtdDFLL3RkWUk1NnlDNTNVaGw4PSJ9fSwic2lnbmVkSWRlbnRpdHlLZXkiOnsicHJpdmF0ZSI6eyJ0eXBlIjoiQnVmZmVyIiwiZGF0YSI6ImlIVWpVOFozVFJSUHhUYndOVW5VYTlZSUFqc0FubnpEa2s5c2VmUVE2RWM9In0sInB1YmxpYyI6eyJ0eXBlIjoiQnVmZmVyIiwiZGF0YSI6IjV4L29BcGhQQXhZOThrbjlPM3ZmMnZ2bDlZNlhhc3J2RU9rekd6a0NSRWM9In19LCJzaWduZWRQcmVLZXkiOnsia2V5UGFpciI6eyJwcml2YXRlIjp7InR5cGUiOiJCdWZmZXIiLCJkYXRhIjoiTU5LeGpnSUYwcjlMaEF5QmZ2dUhwV1JGck5YTncweHovTzZQd0hzNEUzMD0ifSwicHVibGljIjp7InR5cGUiOiJCdWZmZXIiLCJkYXRhIjoiV3g5L040anJVSmxTanJFUk5RWWl3ekhmL3QyV3Q3TFNqNWM5RFllSWFoST0ifX0sInNpZ25hdHVyZSI6eyJ0eXBlIjoiQnVmZmVyIiwiZGF0YSI6Ik1tRW1kU09SZUpMSXg2QzZuQm93ZWdVMXJKVDQ4STZQYUplZHZrTjFyL3Q3RTJFWFRxODgzcUlMRlZYTTFndmJNZld3UUczVEFXREs4MmdCQ0lWVmd3PT0ifSwia2V5SWQiOjF9LCJyZWdpc3RyYXRpb25JZCI6MjE5LCJhZHZTZWNyZXRLZXkiOiJiaHltL05RcXhBNzVwK1FqNUdWemdoMmIrWExESUtnWjRkejIvVVJ6MDRnPSIsInByb2Nlc3NlZEhpc3RvcnlNZXNzYWdlcyI6W3sia2V5Ijp7InJlbW90ZUppZCI6IjkyMzM0MDkyODcxMEBzLndoYXRzYXBwLm5ldCIsImZyb21NZSI6dHJ1ZSwiaWQiOiJBQzg3MjcwMThFMUI1NzNERUQ2QTUwRUI1REI0RkI1NCJ9LCJtZXNzYWdlVGltZXN0YW1wIjoxNzYwODk4NDY0fSx7ImtleSI6eyJyZW1vdGVKaWQiOiI5MjMzNDA5Mjg3MTBAcy53aGF0c2FwcC5uZXQiLCJmcm9tTWUiOnRydWUsImlkIjoiQUNGNjQxMUNGNTcxMzkwMjZFM0YzMTk5MjlDQzcwQUEifSwibWVzc2FnZVRpbWVzdGFtcCI6MTc2MDg5ODQ2NH1dLCJuZXh0UHJlS2V5SWQiOjMxLCJmaXJzdFVudXBsb2FkZWRQcmVLZXlJZCI6MzEsImFjY291bnRTeW5jQ291bnRlciI6MSwiYWNjb3VudFNldHRpbmdzIjp7InVuYXJjaGl2ZUNoYXRzIjpmYWxzZX0sInJlZ2lzdGVyZWQiOnRydWUsInBhaXJpbmdDb2RlIjoiMUZBWVZZOUoiLCJtZSI6eyJpZCI6IjkyMzM0MDkyODcxMDozQHMud2hhdHNhcHAubmV0IiwibGlkIjoiOTYzNzUzNzUxNTEyNjk6M0BsaWQiLCJuYW1lIjoiRiJ9LCJhY2NvdW50Ijp7ImRldGFpbHMiOiJDS2lRbWMwQ0VKTGIxTWNHR0FJZ0FDZ0EiLCJhY2NvdW50U2lnbmF0dXJlS2V5IjoiZE5ZYnRsQTdlQlB6U1Q3c1B5NzNFbHppSmgwK3RiR2thK2xMZlkxeEl4Zz0iLCJhY2NvdW50U2lnbmF0dXJlIjoiREhqdGNUUmU1ZFRBWSt4SUNhNXlRM3dXTUM3U3dXNHY2czhQek5nMHNRU3B5Y1pnMGdKVXBiR0dsNHErS0c3c09aMXRzTUtvblV0aWdib3JDOThEQUE9PSIsImRldmljZVNpZ25hdHVyZSI6IlhjMFJWb2F3SXhpYk96SFdRQ2poQUdCM1k2VExhdHU3R2pQYkJSYkdkWkZHSUpBZG1vb1NFUnd3MzZpMTI2dm9ZOGR0eWlEblhwZjNuWWYxcmdML2h3PT0ifSwic2lnbmFsSWRlbnRpdGllcyI6W3siaWRlbnRpZmllciI6eyJuYW1lIjoiOTIzMzQwOTI4NzEwOjNAcy53aGF0c2FwcC5uZXQiLCJkZXZpY2VJZCI6MH0sImlkZW50aWZpZXJLZXkiOnsidHlwZSI6IkJ1ZmZlciIsImRhdGEiOiJCWFRXRzdaUU8zZ1Q4MGsrN0Q4dTl4SmM0aVlkUHJXeHBHdnBTMzJOY1NNWSJ9fV0sInBsYXRmb3JtIjoiYW5kcm9pZCIsInJvdXRpbmdJbmZvIjp7InR5cGUiOiJCdWZmZXIiLCJkYXRhIjoiQ0FVSUFnPT0ifSwibGFzdEFjY291bnRTeW5jVGltZXN0YW1wIjoxNzYwODk4NDYyLCJsYXN0UHJvcEhhc2giOiJQV2s1QiIsIm15QXBwU3RhdGVLZXlJZCI6IkFBQUFBTThiIn0=",
+SESSION_ID: process.env.SESSION_ID || "",
 // add your Session Id 
 AUTO_STATUS_SEEN: process.env.AUTO_STATUS_SEEN || "true",
 // make true or false status auto seen
@@ -19,7 +19,7 @@ ANTI_DELETE: process.env.ANTI_DELETE || "true",
 // set true false for anti delete     
 ANTI_DEL_PATH: process.env.ANTI_DEL_PATH || "inbox", 
 // change it to 'same' if you want to resend deleted message in same chat     
-WELCOME: process.env.WELCOME || "true",
+WELCOME: process.env.WELCOME || "false",
 // true if want welcome and goodbye msg in groups    
 ADMIN_EVENTS: process.env.ADMIN_EVENTS || "false",
 // make true to know who dismiss or promoted a member in group
@@ -31,11 +31,11 @@ MENU_IMAGE_URL: process.env.MENU_IMAGE_URL || "https://i.ibb.co/9mdHyGDL/shaban-
 // add custom menu and mention reply image url
 PREFIX: process.env.PREFIX || ".",
 // add your prifix for bot   
-BOT_NAME: process.env.BOT_NAME || "FAIZAN-AI",
+BOT_NAME: process.env.BOT_NAME || "*𝐹𝒶𝒾𝓏𝒶𝓃-𝒜𝒾*",
 // add bot namw here for menu
-STICKER_NAME: process.env.STICKER_NAME || "FAIZAN-AI",
+STICKER_NAME: process.env.STICKER_NAME || "*𝐹𝒶𝒾𝓏𝒶𝓃-𝒜𝒾*",
 // type sticker pack name 
-CUSTOM_REACT: process.env.CUSTOM_REACT || "false",
+CUSTOM_REACT: process.env.CUSTOM_REACT || "true",
 // make this true for custum emoji react    
 CUSTOM_REACT_EMOJIS: process.env.CUSTOM_REACT_EMOJIS || "💝,💖,💗,❤️‍🩹,❤️,🧡,💛,💚,💙,💜,🤎,🖤,🤍",
 // chose custom react emojis by yourself 
@@ -45,7 +45,7 @@ OWNER_NUMBER: process.env.OWNER_NUMBER || "923266105873",
 // add your bot owner number
 OWNER_NAME: process.env.OWNER_NAME || "*FAIZAN-AI*",
 // add bot owner name
-DESCRIPTION: process.env.DESCRIPTION || "*© ᴘᴏᴡᴇʀᴇᴅ ʙʏ FAIZAN-AI ❣️*",
+DESCRIPTION: process.env.DESCRIPTION || "*© ✨ ᴾᵒʷᵉʳᵉᵈ ᵇʸ *𝐹𝒶𝒾𝓏𝒶𝓃-𝒜𝒾* ✨💫",
 // add bot owner name    
 ALIVE_VID: process.env.ALIVE_VID || "https://i.ibb.co/9mdHyGDL/shaban-md.jpg",
 // add img for alive msg
