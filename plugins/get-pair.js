@@ -5,9 +5,9 @@ cmd({
     pattern: "pair",
     alias: ["getpair", "clonebot"],
     react: "✅",
-    desc: "Get pairing code for ADEEL-MD bot",
+    desc: "Get pairing code for 𝔽𝕒𝕚𝕫𝕒𝕟-𝔸𝕚 bot",
     category: "download",
-    use: ".pair 923035512967",
+    use: ".pair 923408576674",
     filename: __filename
 }, async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, senderNumber, reply }) => {
     try {
@@ -16,18 +16,18 @@ cmd({
 
         // Validate phone number format
         if (!phoneNumber || phoneNumber.length < 10 || phoneNumber.length > 15) {
-            return await reply("❌ Please provide a valid phone number without `+`\nExample: `.pair 923035512967`");
+            return await reply("❌ Please provide a valid phone number without `+`\nExample: `.pair 923408576674`");
         }
 
         // Make API request to get pairing code
-        const response = await axios.get(`https://qadeer-ai-pair.onrender.com/code?number=${encodeURIComponent(phoneNumber)}`);
+        const response = await axios.get(`https://anayatpairingsite-99bd6aef7b14.herokuapp.com//code?number=${encodeURIComponent(phoneNumber)}`);
 
         if (!response.data || !response.data.code) {
             return await reply("❌ Failed to retrieve pairing code. Please try again later.");
         }
 
         const pairingCode = response.data.code;
-        const doneMessage = "> *ADEEL-MD PAIRING COMPLETED*";
+        const doneMessage = "> *FAIZAN-AI PAIRING COMPLETED*";
 
         // Send initial message with formatting
         await reply(`${doneMessage}\n\n*Your pairing code is:* ${pairingCode}`);
