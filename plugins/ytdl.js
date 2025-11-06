@@ -47,7 +47,7 @@ cmd({
       views: _0x25a862,
       author: _0x2356d
     } = _0x3b9c50.results[0x0];
-    let _0x206abf = "𝓯𝓪𝔃𝓲-𝓳𝓾𝓽𝓽 мυℓтιρℓє ρσωєяƒυℓ ωнαтѕαρρ вσт„\n\n" + ("*Title:* " + (_0x417755 || "Unknown") + "\n") + ("*Duration:* " + (_0x51f7d2 || 'Unknown') + "\n") + ("*Views:* " + (_0x25a862 || 'Unknown') + "\n") + ("*Release Ago:* " + (_0x3ea374 || 'Unknown') + "\n") + ("*Author:* " + (_0x2356d?.["name"] || 'Unknown') + "\n") + ("p*Url:* " + (_0x53641c || 'Unknown') + "\n\n") + ('' + (config.FOOTER || "ð“†©Anayat-Ai Official“†ª"));
+    let _0x206abf = "𝚏𝚊𝚒𝚣𝚊𝚗-𝚓𝚞𝚝𝚝 мυℓтιρℓє ρσωєяƒυℓ ωнαтѕαρρ вσт„\n\n" + ("*Title:* " + (_0x417755 || "Unknown") + "\n") + ("*Duration:* " + (_0x51f7d2 || 'Unknown') + "\n") + ("*Views:* " + (_0x25a862 || 'Unknown') + "\n") + ("*Release Ago:* " + (_0x3ea374 || 'Unknown') + "\n") + ("*Author:* " + (_0x2356d?.["name"] || 'Unknown') + "\n") + ("p*Url:* " + (_0x53641c || 'Unknown') + "\n\n") + ('' + (config.FOOTER || "ð“†©Anayat-Ai Official“†ª"));
     const _0x2110e4 = await _0x4be93c.sendMessage(_0x2c7589, {
       'image': {
         'url': _0x434dfd
@@ -58,7 +58,7 @@ cmd({
     });
     await _0x4be93c.sendMessage(_0x2c7589, {
       'react': {
-        'text': '𝗙𝗔𝗜𝗭𝗔𝗡-𝗔𝗜',
+        'text': '𝙵𝚊𝚒𝚣𝚊𝚗-𝚓𝚞𝚝𝚝',
         'key': _0x2110e4.key
       }
     });
