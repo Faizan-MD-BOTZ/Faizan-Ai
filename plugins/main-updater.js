@@ -16,24 +16,24 @@ cmd({
     if (!isOwner) return reply("This command is only for the bot owner.");
 
     try {
-        await reply("🔍 Checking for Anayat-AI updates...");
+        await reply("🔍 Checking for FAIZAN-AI updates...");
 
         // Fetch the latest commit hash from GitHub
-        const { data: commitData } = await axios.get("https://github.com/ANAYAT-AI/ANAYAT-AI/tree/main");
+        const { data: commitData } = await axios.get("https://github.com/Faizan-MD-BOTZ/Faizan-Ai");
         const latestCommitHash = commitData.sha;
 
         // Get the stored commit hash from the database
         const currentHash = await getCommitHash();
 
         if (latestCommitHash === currentHash) {
-            return reply("✅ Your Anayat-AI bot is already up-to-date!");
+            return reply("✅ Your FAIZAN-AI bot is already up-to-date!");
         }
 
-        await reply("🚀 Updating ANAYAT-AI Bot...");
+        await reply("🚀 Updating 𝐅𝐀𝐈𝐙𝐀𝐍-𝐀𝐈 𝐁𝐎𝐓...");
 
         // Download the latest code
         const zipPath = path.join(__dirname, "latest.zip");
-        const { data: zipData } = await axios.get("https://github.com/ANAYAT-AI/ANAYAT-AI/tree/main", { responseType: "arraybuffer" });
+        const { data: zipData } = await axios.get("https://github.com/Faizan-MD-BOTZ/Faizan-Ai", { responseType: "arraybuffer" });
         fs.writeFileSync(zipPath, zipData);
 
         // Extract ZIP file
@@ -44,7 +44,7 @@ cmd({
 
         // Copy updated files, preserving config.js and app.json
         await reply("🔄 Replacing files...");
-        const sourcePath = path.join(extractPath, "/Anayat-AI-main");
+        const sourcePath = path.join(extractPath, "/FAIZAN-AI-main");
         const destinationPath = path.join(__dirname, '..');
         copyFolderSync(sourcePath, destinationPath);
 
