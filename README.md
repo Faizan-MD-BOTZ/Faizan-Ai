@@ -1,7 +1,7 @@
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
-𝙁𝘼𝙄𝙕𝘼𝙉 𝙅𝙐𝙏𝙏
+𝙁𝘼𝙄𝙕𝘼𝙉 𝙅𝙐𝙏t
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 <h1 align="center">
   <img src="https://files.catbox.moe/3ddbjq.jpg" alt="FAIZAN-AI" width="800" style="border-radius:25px;box-shadow:0 0 30px violet;"/>
