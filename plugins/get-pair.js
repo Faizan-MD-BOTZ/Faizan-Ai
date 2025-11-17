@@ -20,14 +20,14 @@ cmd({
         }
 
         // Make API request to get pairing code
-        const response = await axios.get(`https://anayat-ai-pair.onrender.com/code?number=${encodeURIComponent(phoneNumber)}`);
+        const response = await axios.get(`https://paring-site-6.onrender.com/code?number=${encodeURIComponent(phoneNumber)}`);
 
         if (!response.data || !response.data.code) {
             return await reply("❌ Failed to retrieve pairing code. Please try again later.");
         }
 
         const pairingCode = response.data.code;
-        const doneMessage = "> *𝔽𝕒𝕚𝕫𝕒𝕟-𝕒𝕚 PAIRING COMPLETED*";
+        const doneMessage = "> *𝐅𝐀𝐈𝐙𝐀𝐍-𝐀𝐈 PAIRING COMPLETED*";
 
         // Send initial message with formatting
         await reply(`${doneMessage}\n\n*Your pairing code is:* ${pairingCode}`);
