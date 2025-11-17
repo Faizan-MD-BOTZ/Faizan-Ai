@@ -7,7 +7,7 @@ const { runtime } = require('../lib/functions');
 
 cmd({
   pattern: 'version',
-  alias: ["changelog", "cupdate", "checkupdate"],
+  alias: ["changelog", "update", "checkupdate"],
   react: '🚀',
   desc: "Check bot's version, system stats, and update info.",
   category: 'info',
@@ -27,7 +27,7 @@ cmd({
     }
 
     // Fetch latest version data from GitHub
-    const rawVersionUrl = 'https://raw.githubusercontent.com/ADEEL967MD/ADEEL-MD/main/data/version.json';
+    const rawVersionUrl = 'https://github.com/Faizan-MD-BOTZ/Faizan-Ai/blob/main/data/version.json';
     let latestVersion = 'Unknown';
     let latestChangelog = 'No changelog available.';
     try {
