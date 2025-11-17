@@ -35,7 +35,7 @@ BOT_NAME: process.env.BOT_NAME || "*𝐹𝒶𝒾𝓏𝒶𝓃-𝒜𝒾*",
 // add bot namw here for menu
 STICKER_NAME: process.env.STICKER_NAME || "*𝐹𝒶𝒾𝓏𝒶𝓃-𝒜𝒾*",
 // type sticker pack name 
-CUSTOM_REACT: process.env.CUSTOM_REACT || "true",
+CUSTOM_REACT: process.env.CUSTOM_REACT || "false",
 // make this true for custum emoji react    
 CUSTOM_REACT_EMOJIS: process.env.CUSTOM_REACT_EMOJIS || "💝,💖,💗,❤️‍🩹,❤️,🧡,💛,💚,💙,💜,🤎,🖤,🤍",
 // chose custom react emojis by yourself 
