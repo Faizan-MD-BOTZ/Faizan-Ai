@@ -53,12 +53,12 @@ cmd({
     const lastUpdate = fs.statSync(localVersionPath).mtime.toLocaleString();
 
     // GitHub stats
-    const githubRepo = 'https://github.com/ADEEL967MD/ADEEL-MD';
+    const githubRepo = 'https://github.com/Faizan-MD-BOTZ/Faizan-Ai';
 
     // Check update status
-    let updateMessage = `✅ Your REDZONE-MD bot is up-to-date!`;
+    let updateMessage = `✅ Your 𝐅𝐀𝐈𝐙𝐀𝐍-𝐀𝐈 bot is up-to-date!`;
     if (localVersion !== latestVersion) {
-      updateMessage = `🚀 Your ADEEL-MD bot is outdated!
+      updateMessage = `🚀 Your 𝐅𝐀𝐈𝐙𝐀𝐍-𝐀𝐈 bot is outdated!
 🔹 *Current Version:* ${localVersion}
 🔹 *Latest Version:* ${latestVersion}
 
@@ -66,22 +66,22 @@ Use *.update* to update.`;
     }
 
     const statusMessage = `🌟 *Good ${new Date().getHours() < 12 ? 'Morning' : 'Night'}, ${pushname}!* 🌟\n\n` +
-      `📌 *Bot Name:* ADEEL-MD\n🔖 *Current Version:* ${localVersion}\n📢 *Latest Version:* ${latestVersion}\n📂 *Total Plugins:* ${pluginCount}\n🔢 *Total Commands:* ${totalCommands}\n\n` +
+      `📌 *Bot Name:* 𝐅𝐀𝐈𝐙𝐀𝐍-𝐀𝐈\n🔖 *Current Version:* ${localVersion}\n📢 *Latest Version:* ${latestVersion}\n📂 *Total Plugins:* ${pluginCount}\n🔢 *Total Commands:* ${totalCommands}\n\n` +
       `💾 *System Info:*\n⏳ *Uptime:* ${uptime}\n📟 *RAM Usage:* ${ramUsage}MB / ${totalRam}MB\n⚙️ *Host Name:* ${hostName}\n📅 *Last Update:* ${lastUpdate}\n\n` +
       `📝 *Changelog:*\n${latestChangelog}\n\n` +
-      `⭐ *GitHub Repo:* ${githubRepo}\n👤 *Owner:* [𝐀𝐃𝐄𝐄𝐋-𝐌𝐃](https://github.com/ADEEL967MD)\n\n${updateMessage}\n\n🚀 *Hey! Don't forget to fork & star the repo!*`;
+      `⭐ *GitHub Repo:* ${githubRepo}\n👤 *Owner:* [𝐅𝐀𝐈𝐙𝐀𝐍-𝐀𝐈](https://github.com/Faizan-MD-BOTZ)\n\n${updateMessage}\n\n🚀 *Hey! Don't forget to fork & star the repo!*`;
 
     // Send the status message with an image
     await conn.sendMessage(from, {
-      image: { url: 'https://files.catbox.moe/hg5hj6.jpg' },
+      image: { url: 'https://files.catbox.moe/ejufwa.jpg' },
       caption: statusMessage,
       contextInfo: {
         mentionedJid: [m.sender],
         forwardingScore: 999,
         isForwarded: true,
         forwardedNewsletterMessageInfo: {
-          newsletterJid: '120363403380688821@newsletter',
-          newsletterName: '𝐀𝐃𝐄𝐄𝐋-𝐌𝐃',
+          newsletterJid: '120363421896999345@newsletter',
+          newsletterName: '𝐅𝐀𝐈𝐙𝐀𝐍-𝐀𝐈',
           serverMessageId: 143
         }
       }
