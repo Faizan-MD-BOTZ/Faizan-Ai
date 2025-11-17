@@ -8,7 +8,7 @@ const botNameStyles = [
     "𝖋𝖆𝖎𝖟𝖆𝖓-𝕬𝖎",
     "ⓕⓐⓘⓩⓐⓝ-Ⓐⓘ",
     "𝙵𝚊𝚒𝚣𝚊𝚗-𝙰𝚒",
-    "🅐🅝🅐🅨🅐🅣-🅐🅘",
+    "𝐅𝐀𝐈𝐙𝐀𝐍-𝐀𝐈",
     "f⃠a⃠i⃠z⃠a⃠n⃠-⃠A⃠i⃠",
     "𝖿𝖺𝗂𝗓𝖺𝗇-𝖠𝗂",
     "𝘍𝘢𝘪𝘻𝘢𝘯-𝘈𝘪",
@@ -64,7 +64,7 @@ async (conn, mek, m, { from, quoted, sender, reply }) => {
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
                     newsletterJid: '120363421896999345@newsletter',
-                    newsletterName: "𝔽𝕒𝕚𝕫𝕒𝕟-𝔸𝕚",
+                    newsletterName: "𝐅𝐀𝐈𝐙𝐀𝐍-𝐀𝐈",
                     serverMessageId: 143
                 }
             }
