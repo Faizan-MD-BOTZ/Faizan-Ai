@@ -19,7 +19,7 @@ cmd({
     await conn.sendMessage(from, { react: { text: '⏳', key: m.key } });
 
     // Fetch video URL from the API
-    const apiUrl = `https://fb-down.apis-bj-devs.workers.dev/?url=${encodeURIComponent(q)}`;
+    const apiUrl = `https://api.giftedtech.co.ke/api/download/facebook?apikey=gifted&url=https%3A%2F%2Fwww.facebook.com%2Freel%2F402579285704851%3Fmibextid%3DrS40aB7S9Ucbxw6v{encodeURIComponent(q)}`;
     const { data } = await axios.get(apiUrl);
 
     // Check if the API response is valid
