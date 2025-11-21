@@ -3,42 +3,50 @@ const { cmd } = require('../command');
 cmd({
     pattern: "ping",
     alias: ["p", "pg", "speed", "fast"],
-    desc: "Smart animated ping with edit effect + multi-react.",
+    react: "🏓",
+    desc: "Smart animated ping with edit effect + random react + username.",
     category: "info",
     filename: __filename
 }, async (conn, m, store, { reply }) => {
     try {
 
-        // 🔥 BIG LIST OF RANDOM EMOJIS
-        const reacts = [
-            "🏓", "⚡", "🔥", "🚀", "💥", "✨", "⚡", "💫", 
-            "🌀", "🌟", "⭐", "🔮", "🎯", "🎉", "💨"
-        ];
+        const pushname = m.pushName || "User";
 
-        // 🔄 Har baar random reaction
+        // RANDOM REACT EMOJIS LIST
+        const reacts = ["🏓", "⚡", "🔥", "🚀", "💥", "✨", "🌟", "💫", "🎯", "⚡", "⚙️"];
+
+        // Pick random reaction every time ping runs
         const randomReact = reacts[Math.floor(Math.random() * reacts.length)];
 
-        // Send react
-        await conn.sendMessage(m.chat, { react: { text: randomReact, key: m.key } });
+        // Send reaction
+        await conn.sendMessage(m.chat, {
+            react: {
+                text: randomReact,
+                key: m.key
+            }
+        });
 
         const start = Date.now();
 
-        // First message
+        // First message (Before edit)
         let sent = await conn.sendMessage(m.chat, {
-            text: `${randomReact} *Pinging...*`
+            text: `🏓 *Pinging...*`
         }, { quoted: m });
 
-        // Delay
-        await new Promise(res => setTimeout(res, 600));
+        // Wait
+        await new Promise(resolve => setTimeout(resolve, 700));
 
         const end = Date.now();
         const ping = end - start;
 
-        // Final EDIT message
+        // EDIT same message
         await conn.sendMessage(
             m.chat,
             {
-                text: `⚡ *Ping:* \`${ping}ms\`\n🔥 *Speed Stable!*`,
+                text:
+`⚡ *Ping:* \`${ping}ms\`
+👤 *User:* ${pushname}
+🔥 Speed Perfect!`,
                 edit: sent.key
             }
         );
