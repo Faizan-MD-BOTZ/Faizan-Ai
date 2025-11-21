@@ -1,55 +1,43 @@
 const { cmd } = require('../command');
 
+const reacts = ["🏓", "⚡", "🔥", "💥", "🚀", "✨", "💫", "🎯", "⚙️", "🌪️"];
+
 cmd({
     pattern: "ping",
     alias: ["p", "pg", "speed", "fast"],
-    react: "🏓",
-    desc: "Smart animated ping with edit effect + random react + username.",
+    react: "⚡",
+    desc: "Smart ping with style, reacts & edit.",
     category: "info",
     filename: __filename
 }, async (conn, m, store, { reply }) => {
     try {
-
-        const pushname = m.pushName || "User";
-
-        // RANDOM REACT EMOJIS LIST
-        const reacts = ["🏓", "⚡", "🔥", "🚀", "💥", "✨", "🌟", "💫", "🎯", "⚡", "⚙️"];
-
-        // Pick random reaction every time ping runs
+        // RANDOM REACT EVERY TIME
         const randomReact = reacts[Math.floor(Math.random() * reacts.length)];
-
-        // Send reaction
         await conn.sendMessage(m.chat, {
-            react: {
-                text: randomReact,
-                key: m.key
-            }
+            react: { text: randomReact, key: m.key }
         });
+
+        // USER NAME STYLISH 🌟
+        const name = m.pushName || "User";
+        const fancyName = `✨『 *${name}* 』✨`;
 
         const start = Date.now();
 
-        // First message (Before edit)
+        // FIRST MESSAGE
         let sent = await conn.sendMessage(m.chat, {
-            text: `🏓 *Pinging...*`
+            text: `🏓 *Pinging...*\n${fancyName}`
         }, { quoted: m });
 
-        // Wait
-        await new Promise(resolve => setTimeout(resolve, 700));
+        await new Promise(r => setTimeout(r, 700));
 
         const end = Date.now();
         const ping = end - start;
 
-        // EDIT same message
-        await conn.sendMessage(
-            m.chat,
-            {
-                text:
-`⚡ *Ping:* \`${ping}ms\`
-👤 *User:* ${pushname}
-🔥 Speed Perfect!`,
-                edit: sent.key
-            }
-        );
+        // EDIT SAME MESSAGE
+        await conn.sendMessage(m.chat, {
+            text: `⚡ *Ping:* \`${ping}ms\`\n🔥 Speed Stable!\n${fancyName}`,
+            edit: sent.key
+        });
 
     } catch (e) {
         console.error(e);
