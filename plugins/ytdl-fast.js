@@ -8,7 +8,7 @@ cmd({
   'alias': ['song', "mp3"],
   'desc': "Download YouTube Audio",
   'category': 'downloader',
-  'react': '💓,✅',
+  'react': ',✅',
   'filename': __filename
 }, async (_0x54d9ac, _0x5aa73c, _0x3dc390, {
   from: _0x1d9214,
