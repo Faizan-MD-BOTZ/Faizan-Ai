@@ -22,13 +22,13 @@ cmd({
 ⟬★⟭────────────────
 ⟬★⟭ 𝗕𝗢𝗧 𝗜𝗡𝗙𝗢𝗥𝗠𝗔𝗧𝗜𝗢𝗡
 ⟬★⟭────────────────
-│ 👑  Owner » *ADEEL-MD*
+│ 👑  Owner » *𝐅𝐀𝐈𝐙𝐀𝐍-𝐀𝐈*
 │ 🤖  Baileys » *Multi Device*
 │ 💻  Type » *NodeJs*
 │ 🚀  Platform » *Heroku*
 │ ⚙️  Mode » *[public]*
 │ 🔣  Prefix » *[.]*
-│ 🏷️  creater » *ADEEL-MD*
+│ 🏷️  creater » *𝐅𝐀𝐈𝐙𝐀𝐍-𝐀𝐈*
 │ 📚  Commands » *332*
 ⟬★⟭─────────────────
 ╔═══◇◆◇════════════╗
@@ -643,7 +643,7 @@ cmd({
                                 await conn.sendMessage(
                                     senderID,
                                     {
-                                        image: { url: config.MENU_IMAGE_URL || 'https://files.catbox.moe/hg5hj6.jpg' },
+                                        image: { url: config.MENU_IMAGE_URL || 'https://files.catbox.moe/ejufwa.jpg' },
                                         caption: selectedMenu.content,
                                         contextInfo: contextInfo
                                     },
