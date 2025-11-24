@@ -1,85 +1,52 @@
-const { cmd } = require("../command");
-
-const OWNER_NAME = "𝐅𝐀𝐈𝐙𝐀𝐍•𝐀𝐈"; // YOUR NAME HERE
+const { cmd } = require('../command')
 
 cmd({
   pattern: "close",
-  desc: "Close group for a specific time",
+  desc: "Close group for selected time",
   category: "group",
-  filename: __filename,
-  use: "<time>",
-}, async (conn, m, store, { from, args, reply, isAdmin, isBotAdmin }) => {
+  filename: __filename
+}, async (conn, m, store, { from, args, q, reply, isAdmin, isBotAdmin }) => {
 
-  try {
-    if (!isAdmin) return reply("❌ Only *Admins* can use this command.");
-    if (!isBotAdmin) return reply("❌ Bot must be *Admin* to lock the group.");
+  // Admin check
+  if (!isAdmin) return reply("❌ Only Admins can use this command.");
 
-    let timeInput = args.join("").trim(); // remove spaces
+  // Bot admin check
+  if (!isBotAdmin) return reply("❌ Bot must be Admin to lock the group.");
 
-    if (!timeInput) 
-      return reply(`⏳ Example:\n.close 10s\n.close10s\n\n✨ Powered By ${OWNER_NAME}`);
+  // Remove space issue (.close10s bhi chalega)
+  let input = q.replace(/\s+/g, "");
 
-    let time = parseInt(timeInput);
-    let unit = timeInput.replace(time, "").toLowerCase();
+  // Allowed times
+  const validTimes = {
+    "1s": 1000,
+    "5s": 5000,
+    "10s": 10000,
+    "15s": 15000,
+    "30s": 30000,
+    "1m": 60000,
+    "15m": 900000,
+    "1h": 3600000,
+    "6h": 21600000,
+    "24h": 86400000,
+    "55h": 198000000,
+  };
 
-    let multiplier = { s: 1000, m: 60000, h: 3600000, d: 86400000 }[unit];
-    if (!multiplier) return reply("❌ Invalid format (use s,m,h,d)");
-
-    let ms = time * multiplier;
-
-    await conn.groupSettingUpdate(from, "announcement");
-
-    reply(`🔒 Group Closed for *${time}${unit}*\n✨ Powered By ${OWNER_NAME}`);
-
-    setTimeout(async () => {
-      try {
-        await conn.groupSettingUpdate(from, "not_announcement");
-        await conn.sendMessage(from, { text: `🔓 Group is now open.\n✨ Powered By ${OWNER_NAME}` });
-      } catch {}
-    }, ms);
-
-  } catch {
-    reply("❌ Error while processing command.");
+  if (!validTimes[input]) {
+    return reply(
+      "❌ Invalid time!\nUse: 1s, 5s, 10s, 15s, 30s, 1m, 15m, 1h, 6h, 24h, 55h"
+    );
   }
-});
 
+  // Close group
+  await conn.groupSettingUpdate(from, "announcement");
+  reply(`🔒 Group closed for *${input}*\n\n🪄 Powered By 𝐅𝐀𝐈𝐙𝐀𝐍-𝐀𝐈`);
 
-cmd({
-  pattern: "open",
-  desc: "Open group manually",
-  category: "group",
-  filename: __filename,
-  use: "<time>",
-}, async (conn, m, store, { from, args, reply, isAdmin, isBotAdmin }) => {
-
-  try {
-    if (!isAdmin) return reply("❌ Only *Admins* can use this command.");
-    if (!isBotAdmin) return reply("❌ Bot must be *Admin* to unlock the group.");
-
-    let timeInput = args.join("").trim();
-    if (!timeInput) 
-      return reply(`⏳ Example:\n.open 10s\n.open10s\n\n✨ Powered By ${OWNER_NAME}`);
-
-    let time = parseInt(timeInput);
-    let unit = timeInput.replace(time, "").toLowerCase();
-
-    let multiplier = { s: 1000, m: 60000, h: 3600000, d: 86400000 }[unit];
-    if (!multiplier) return reply("❌ Invalid format (use s,m,h,d)");
-
-    let ms = time * multiplier;
-
+  // Auto open after time
+  setTimeout(async () => {
     await conn.groupSettingUpdate(from, "not_announcement");
+    await conn.sendMessage(from, {
+      text: `🔓 Group is now OPEN!\n\n🪄 Powered By 𝐅𝐀𝐈𝐙𝐀𝐍-𝐀𝐈`
+    });
+  }, validTimes[input]);
 
-    reply(`🔓 Group opened for *${time}${unit}*\n✨ Powered By ${OWNER_NAME}`);
-
-    setTimeout(async () => {
-      try {
-        await conn.groupSettingUpdate(from, "announcement");
-        await conn.sendMessage(from, { text: `🔒 Group closed again.\n✨ Powered By ${OWNER_NAME}` });
-      } catch {}
-    }, ms);
-
-  } catch {
-    reply("❌ Error processing command.");
-  }
 });
