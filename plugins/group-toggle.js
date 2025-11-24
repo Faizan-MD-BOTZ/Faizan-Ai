@@ -1,99 +1,108 @@
 const { cmd } = require("../command");
 
+// ===================== GROUP CLOSE =========================
+
 cmd({
   pattern: "close",
-  desc: "Close group for a specific time",
+  alias: ["lock", "gcclose"],
+  desc: "Close group for specific time",
   category: "group",
   filename: __filename,
-  use: "<time>",
-}, async (conn, m, store, { from, args, reply, isAdmin, isBotAdmin }) => {
+  use: "<10s | 1m | 1h>",
+}, async (conn, m, store, { from, args, q, reply }) => {
 
-  try {
-    if (!isAdmin) return reply("❌ Only *Admins* can use this command.");
-    if (!isBotAdmin) return reply("❌ Bot must be *Admin* to lock the group.");
+  if (!from.endsWith("@g.us")) return;
 
-    // Remove spaces like ".close 10s" or ".close10s"
-    let timeInput = args.join("").trim(); 
+  // ADMIN CHECK
+  const groupMetadata = await conn.groupMetadata(from);
+  const isAdmin = groupMetadata.participants
+    .filter(p => p.admin !== null)
+    .map(p => p.id)
+    .includes(m.sender);
 
-    if (!timeInput) return reply("⏳ Example: `.close 10s` or `.close10s`");
+  if (!isAdmin) return reply("❌ *Only admins can use this command!*");
 
-    // Convert time
-    let time = parseInt(timeInput);
-    let unit = timeInput.replace(time, "").toLowerCase();
-
-    let multiplier = {
-      s: 1000,
-      m: 60000,
-      h: 3600000,
-      d: 86400000
-    }[unit];
-
-    if (!multiplier) return reply("❌ Invalid format. Use: s, m, h, d");
-
-    let ms = time * multiplier;
-
-    // Lock group
-    await conn.groupSettingUpdate(from, "announcement");
-    reply(`🔒 Group Closed for *${time}${unit}*`);
-
-    // Wait then unlock
-    setTimeout(async () => {
-      try {
-        await conn.groupSettingUpdate(from, "not_announcement");
-        await conn.sendMessage(from, { text: "🔓 Group is now open automatically." });
-      } catch (e) {}
-    }, ms);
-
-  } catch (e) {
-    console.log(e);
-    reply("❌ Error while processing command.");
+  // SUPPORT: .close10s, .close 10s, . close 10s
+  if (!args[0]) {
+    args[0] = q
+      .replace(/^\./, "")      // remove first dot
+      .replace(/close/i, "")   // remove word close
+      .trim();                 // remove spaces
   }
+
+  if (!args[0]) return reply("🛑 *Use:* .close 10s | 1m | 1h");
+
+  const match = args[0].match(/(\d+)(s|m|h)/i);
+  if (!match) return reply("❌ *Invalid time format!*");
+
+  const num = parseInt(match[1]);
+  const unit = match[2].toLowerCase();
+
+  const duration =
+    unit === "s" ? num * 1000 :
+    unit === "m" ? num * 60000 :
+    unit === "h" ? num * 3600000 : null;
+
+  await conn.groupSettingUpdate(from, "announcement");
+  await reply(`🔒 *Group closed for ${args[0]}*`);
+
+  setTimeout(async () => {
+    await conn.groupSettingUpdate(from, "not_announcement");
+    await conn.sendMessage(from, { text: "🔓 *Group auto-opened now!*" });
+  }, duration);
+
 });
 
 
+// ===================== GROUP OPEN =========================
+
 cmd({
   pattern: "open",
-  desc: "Open group manually",
+  alias: ["unlock", "gcopen"],
+  desc: "Open group",
   category: "group",
   filename: __filename,
-  use: "<time>",
-}, async (conn, m, store, { from, args, reply, isAdmin, isBotAdmin }) => {
-  
-  try {
-    if (!isAdmin) return reply("❌ Only *Admins* can use this command.");
-    if (!isBotAdmin) return reply("❌ Bot must be *Admin* to unlock the group.");
+  use: "<optional time>",
+}, async (conn, m, store, { from, args, q, reply }) => {
 
-    let timeInput = args.join("").trim();
-    if (!timeInput) return reply("⏳ Example: `.open 10s` or `.open10s`");
+  if (!from.endsWith("@g.us")) return;
 
-    let time = parseInt(timeInput);
-    let unit = timeInput.replace(time, "").toLowerCase();
+  // ADMIN CHECK
+  const groupMetadata = await conn.groupMetadata(from);
+  const isAdmin = groupMetadata.participants
+    .filter(p => p.admin !== null)
+    .map(p => p.id)
+    .includes(m.sender);
 
-    let multiplier = {
-      s: 1000,
-      m: 60000,
-      h: 3600000,
-      d: 86400000
-    }[unit];
+  if (!isAdmin) return reply("❌ *Only admins can use this command!*");
 
-    if (!multiplier) return reply("❌ Invalid format. Use: s, m, h, d");
-
-    let ms = time * multiplier;
-
-    // Open group
-    await conn.groupSettingUpdate(from, "not_announcement");
-    reply(`🔓 Group opened for *${time}${unit}*`);
-
-    // Auto re-close
-    setTimeout(async () => {
-      try {
-        await conn.groupSettingUpdate(from, "announcement");
-        await conn.sendMessage(from, { text: "🔒 Group automatically closed again." });
-      } catch (e) {}
-    }, ms);
-
-  } catch (e) {
-    console.log(e);
-    reply("❌ Error while processing command.");
+  // SUPPORT: .open10s, .open 10s, . open 10s
+  if (!args[0]) {
+    args[0] = q
+      .replace(/^\./, "")      // remove dot
+      .replace(/open/i, "")    // remove open word
+      .trim();
   }
+
+  await conn.groupSettingUpdate(from, "not_announcement");
+  await reply("🔓 *Group is now OPEN!*");
+
+  if (args[0]) {
+    const match = args[0].match(/(\d+)(s|m|h)/i);
+    if (!match) return reply("❌ Invalid time!");
+
+    const num = parseInt(match[1]);
+    const unit = match[2].toLowerCase();
+
+    const duration =
+      unit === "s" ? num * 1000 :
+      unit === "m" ? num * 60000 :
+      unit === "h" ? num * 3600000 : null;
+
+    setTimeout(async () => {
+      await conn.groupSettingUpdate(from, "announcement");
+      await conn.sendMessage(from, { text: "🔒 *Group auto-closed now!*" });
+    }, duration);
+  }
+
 });
