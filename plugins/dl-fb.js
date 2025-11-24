@@ -18,17 +18,17 @@ cmd({
     // Add a loading react
     await conn.sendMessage(from, { react: { text: '⏳', key: m.key } });
 
-    // Fetch video URL from the API
-    const apiUrl = `https://fb-down.apis-bj-devs.workers.dev/?url=${encodeURIComponent(q)}`;
+    // Fetch video URL from the GiftedTech API
+    const apiUrl = `https://api.giftedtech.co.ke/api/download/facebook?apikey=gifted&url=${encodeURIComponent(q)}`;
     const { data } = await axios.get(apiUrl);
 
     // Check if the API response is valid
-    if (!data.status || !data.data || !data.data.url) {
+    if (!data.success || !data.result || !data.result.url) {
       return reply("❌ Failed to fetch the video. Please try another link.");
     }
 
     // Send the video to the user
-    const videoUrl = data.data.url;
+    const videoUrl = data.result.url;
     await conn.sendMessage(from, {
       video: { url: videoUrl },
       caption: "📥 *Facebook Video Downloaded*\n\n- *© 𝙿𝙾𝚆𝙴𝚁𝙴𝙳 𝙱𝚈 𝚀𝙰𝙳𝙴𝙴𝚁 𝚇 𝙽𝙾𝙼𝙸 ❣️*",
