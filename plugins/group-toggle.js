@@ -11,10 +11,8 @@ cmd({
 
   if (!from.endsWith("@g.us")) return;
 
-  // time required
-  if (!args[0]) return reply("⛔ *Use:* .close 10s | 1m | 1h");
+  if (!args[0]) return reply("🛑 *Use:* .close 10s | 1m | 1h");
 
-  // convert time
   const match = args[0].match(/(\d+)(s|m|h)/i);
   if (!match) return reply("❌ Invalid time! Use: 10s / 1m / 1h");
 
@@ -27,11 +25,9 @@ cmd({
 
   if (!duration) return reply("❌ Invalid time format.");
 
-  // group close
   await conn.groupSettingUpdate(from, "announcement");
   await reply(`🔒 *Group closed for ${args[0]}*`);
 
-  // auto open
   setTimeout(async () => {
     await conn.groupSettingUpdate(from, "not_announcement");
     await conn.sendMessage(from, { text: "🔓 *Group auto-opened now!*" });
@@ -39,8 +35,7 @@ cmd({
 
 });
 
-
-// ========================= OPEN COMMAND ==============================
+// ===================== OPEN COMMAND ======================
 
 cmd({
   pattern: "open",
@@ -53,13 +48,10 @@ cmd({
 
   if (!from.endsWith("@g.us")) return;
 
-  // open now
   await conn.groupSettingUpdate(from, "not_announcement");
   await reply("🔓 *Group is now OPEN!*");
 
-  // if user gives time after open
   if (args[0]) {
-
     const match = args[0].match(/(\d+)(s|m|h)/i);
     if (!match) return reply("❌ Invalid time! Use: 10s / 1m / 1h");
 
@@ -70,11 +62,9 @@ cmd({
       unit === "m" ? num * 60000 :
       unit === "h" ? num * 3600000 : null;
 
-    if (!duration) return reply("❌ Invalid time format.");
-
     setTimeout(async () => {
       await conn.groupSettingUpdate(from, "announcement");
-      await conn.sendMessage(from, { text: `🔒 *Group auto-closed after ${args[0]}*` });
+      await conn.sendMessage(from, { text: "🔒 *Group auto-closed now!*" });
     }, duration);
   }
 
