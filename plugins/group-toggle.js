@@ -1,65 +1,77 @@
 const { cmd } = require("../command");
 
-// ===================== GROUP CLOSE =========================
+// =========================================
+// SUPER FLEXIBLE TIME PARSER
+// =========================================
+function parseTime(input) {
+  if (!input) return null;
 
+  // Clean input (allow only num + s/m/h)
+  input = input.replace(/[^0-9smh]/gi, "");
+
+  // Extract number & unit
+  const numMatch = input.match(/\d+/);
+  const unitMatch = input.match(/[smh]/i);
+
+  if (!numMatch || !unitMatch) return null;
+
+  const num = parseInt(numMatch[0]);
+  const unit = unitMatch[0].toLowerCase();
+
+  const ms =
+    unit === "s" ? num * 1000 :
+    unit === "m" ? num * 60000 :
+    unit === "h" ? num * 3600000 :
+    null;
+
+  return ms;
+}
+
+// =========================================
+// GROUP CLOSE COMMAND
+// =========================================
 cmd({
   pattern: "close",
   alias: ["lock", "gcclose"],
-  desc: "Close group for specific time",
+  desc: "Close group for a specific time",
   category: "group",
   filename: __filename,
-  use: "<10s | 1m | 1h>",
+  use: "<10s | 1m | 1h | etc>",
 }, async (conn, m, store, { from, args, q, reply }) => {
 
   if (!from.endsWith("@g.us")) return;
 
-  // ADMIN CHECK
-  const groupMetadata = await conn.groupMetadata(from);
-  const isAdmin = groupMetadata.participants
-    .filter(p => p.admin !== null)
-    .map(p => p.id)
-    .includes(m.sender);
+  const group = await conn.groupMetadata(from);
+  const admins = group.participants.filter(p => p.admin !== null).map(p => p.id);
+  const isAdmin = admins.includes(m.sender);
+  const isOwner = m.sender.includes(global.owner);
 
-  if (!isAdmin) return reply("❌ *Only admins can use this command!*");
+  if (!isAdmin && !isOwner)
+    return reply("❌ *Only Admins or Bot Owner can use this command!*");
 
-  // SUPPORT: .close10s, .close 10s, . close 10s
-  if (!args[0]) {
-    args[0] = q
-      .replace(/^\./, "")      // remove first dot
-      .replace(/close/i, "")   // remove word close
-      .trim();                 // remove spaces
-  }
+  let input = args[0] || q;
+  if (!input) return reply("⛔ Example: .close 10s | 1m | 1h");
 
-  if (!args[0]) return reply("🛑 *Use:* .close 10s | 1m | 1h");
-
-  const match = args[0].match(/(\d+)(s|m|h)/i);
-  if (!match) return reply("❌ *Invalid time format!*");
-
-  const num = parseInt(match[1]);
-  const unit = match[2].toLowerCase();
-
-  const duration =
-    unit === "s" ? num * 1000 :
-    unit === "m" ? num * 60000 :
-    unit === "h" ? num * 3600000 : null;
+  const duration = parseTime(input);
+  if (!duration) return reply("❌ Invalid time! Try: 10s, 1m, 1h");
 
   await conn.groupSettingUpdate(from, "announcement");
-  await reply(`🔒 *Group closed for ${args[0]}*`);
+  await reply(`🔒 *Group closed for ${input.trim()}*`);
 
   setTimeout(async () => {
     await conn.groupSettingUpdate(from, "not_announcement");
-    await conn.sendMessage(from, { text: "🔓 *Group auto-opened now!*" });
+    await conn.sendMessage(from, { text: "🔓 *Group auto-opened!*" });
   }, duration);
-
 });
 
 
-// ===================== GROUP OPEN =========================
-
+// =========================================
+// GROUP OPEN COMMAND
+// =========================================
 cmd({
   pattern: "open",
   alias: ["unlock", "gcopen"],
-  desc: "Open group",
+  desc: "Open group for specific time",
   category: "group",
   filename: __filename,
   use: "<optional time>",
@@ -67,42 +79,27 @@ cmd({
 
   if (!from.endsWith("@g.us")) return;
 
-  // ADMIN CHECK
-  const groupMetadata = await conn.groupMetadata(from);
-  const isAdmin = groupMetadata.participants
-    .filter(p => p.admin !== null)
-    .map(p => p.id)
-    .includes(m.sender);
+  const group = await conn.groupMetadata(from);
+  const admins = group.participants.filter(p => p.admin !== null).map(p => p.id);
+  const isAdmin = admins.includes(m.sender);
+  const isOwner = m.sender.includes(global.owner);
 
-  if (!isAdmin) return reply("❌ *Only admins can use this command!*");
-
-  // SUPPORT: .open10s, .open 10s, . open 10s
-  if (!args[0]) {
-    args[0] = q
-      .replace(/^\./, "")      // remove dot
-      .replace(/open/i, "")    // remove open word
-      .trim();
-  }
+  if (!isAdmin && !isOwner)
+    return reply("❌ *Only Admins or Bot Owner can use this command!*");
 
   await conn.groupSettingUpdate(from, "not_announcement");
   await reply("🔓 *Group is now OPEN!*");
 
-  if (args[0]) {
-    const match = args[0].match(/(\d+)(s|m|h)/i);
-    if (!match) return reply("❌ Invalid time!");
+  let input = args[0] || q;
 
-    const num = parseInt(match[1]);
-    const unit = match[2].toLowerCase();
+  if (input) {
+    const duration = parseTime(input);
 
-    const duration =
-      unit === "s" ? num * 1000 :
-      unit === "m" ? num * 60000 :
-      unit === "h" ? num * 3600000 : null;
+    if (!duration) return reply("⛔ Invalid time! Example: 10s, 1m, 1h");
 
     setTimeout(async () => {
       await conn.groupSettingUpdate(from, "announcement");
-      await conn.sendMessage(from, { text: "🔒 *Group auto-closed now!*" });
+      await conn.sendMessage(from, { text: "🔒 *Group auto-closed!*" });
     }, duration);
   }
-
 });
