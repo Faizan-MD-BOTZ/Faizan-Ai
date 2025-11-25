@@ -42,7 +42,7 @@
 <p align="center">
   <a href="https://fzi-47d2ff678688.herokuapp.com/pair">
 <p align="center">
-  <a href="https://paring-site-6.onrender.com/">
+  <a href="https://paring-site-y0ps.onrender.com/">
     <img src="https://img.shields.io/badge/Get-Session_ID-00BFFF?style=for-the-badge&logo=whatsapp&logoColor=white" />
   </a>
 </p>
