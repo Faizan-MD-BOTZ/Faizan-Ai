@@ -53,15 +53,15 @@ async(conn, mek, m, {from, l, quoted, body, isCmd, command, args, q, isGroup, se
         await conn.sendMessage(
             from,
             {
-                image: { url: `https://files.catbox.moe/l8psgf.jpg` },
+                image: { url: `https://files.catbox.moe/ejufwa.jpg` },
                 caption: dec,
                 contextInfo: {
                     mentionedJid: [m.sender],
                     forwardingScore: 999,
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
-                        newsletterJid: '120363418906972955@newsletter',
-                        newsletterName: '𝐑𝐄𝐃𝐙𝐎𝐍𝐄-𝐌𝐃',
+                        newsletterJid: '120363421896999345@newsletter',
+                        newsletterName: '𝐅𝐀𝐈𝐙𝐀𝐍-𝐌𝐃',
                         serverMessageId: 143
                     }
                 }
