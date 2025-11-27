@@ -35,8 +35,8 @@ async (conn, mek, m, { from, sender, reply }) => {
                 forwardingScore: 1000,
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                    newsletterJid: '120363418906972955@newsletter',
-                    newsletterName: '𝐑𝐄𝐃𝐙𝐎𝐍𝐄-𝐌𝐃',
+                    newsletterJid: 'https://github.com/Faizan-MD-BOTZ/Faizan-Ai',
+                    newsletterName: '𝐅𝐀𝐈𝐙𝐀𝐍-𝐌𝐃',
                     serverMessageId: 143
                 }
             }
