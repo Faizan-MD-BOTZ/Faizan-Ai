@@ -1,58 +1,71 @@
 const { cmd } = require("../command");
 const axios = require("axios");
 const fs = require("fs");
+const FormData = require("form-data");
 
 cmd({
   pattern: "copy",
   react: "📋",
-  desc: "Copy text from message or image (OCR)",
+  desc: "Copy text from replied image or message",
   category: "tools",
-}, async (conn, m, store, { quoted, reply }) => {
+}, 
+async (client, m, store, { reply }) => {
   try {
-    if (!quoted) return reply("⚠️ Baji kisi message ya image par reply karo.");
+    // Detect quoted message (universal method)
+    const quoted =
+      m.quoted ||
+      m.msg?.contextInfo?.quotedMessage ||
+      m.message?.extendedTextMessage?.contextInfo?.quotedMessage;
+
+    if (!quoted) return reply("⚠️ Baji kisi image ya text par reply karo.");
 
     // If replied to TEXT
-    if (quoted.text) {
-      return reply(`📋 *Copied Text:*\n\n${quoted.text}`);
+    let qText =
+      quoted?.conversation ||
+      quoted?.extendedTextMessage?.text;
+
+    if (qText) {
+      return reply(`📋 *Copied Text:*\n\n${qText}`);
     }
 
     // If replied to IMAGE
-    let mime = quoted.mimetype || "";
-    if (mime.startsWith("image/")) {
-      await reply("🔍 *Image se text read ho raha hai, zara rukna…*");
+    const img =
+      quoted?.imageMessage ||
+      quoted?.stickerMessage?.imageMessage ||
+      quoted?.message?.imageMessage;
 
-      let buffer = await quoted.download();
+    if (!img) return reply("⚠️ Baji image par reply karo.");
 
-      // Save temp image
-      fs.writeFileSync("./temp.jpg", buffer);
+    await reply("🔍 *Image se text read ho raha hai...*");
 
-      // OCR API Request (OCR Space)
-      const form = new FormData();
-      form.append("file", fs.createReadStream("./temp.jpg"));
-      form.append("language", "eng");
-      form.append("OCREngine", "2");
+    // Download quoted image
+    const buffer = await client.downloadMediaMessage({ message: { imageMessage: img } });
 
-      const response = await axios.post(
-        "https://api.ocr.space/parse/image",
-        form,
-        { headers: form.getHeaders() }
-      );
+    // Save temp
+    fs.writeFileSync("./temp.jpg", buffer);
 
-      // Delete temp file
-      fs.unlinkSync("./temp.jpg");
+    // OCR API
+    const form = new FormData();
+    form.append("file", fs.createReadStream("./temp.jpg"));
+    form.append("language", "eng");
+    form.append("OCREngine", "2");
 
-      const text =
-        response.data?.ParsedResults?.[0]?.ParsedText?.trim() || null;
+    const res = await axios.post(
+      "https://api.ocr.space/parse/image",
+      form,
+      { headers: form.getHeaders() }
+    );
 
-      if (!text) return reply("❌ Image me koi readable text nahi mila.");
+    fs.unlinkSync("./temp.jpg");
 
-      return reply(`📋 *Copied from Image:*\n\n${text}`);
-    }
+    const text = res.data?.ParsedResults?.[0]?.ParsedText?.trim();
 
-    reply("⚠️ Sirf text ya image par reply karo baji.");
+    if (!text) return reply("❌ Image me koi readable text nahi mila.");
 
-  } catch (err) {
-    console.log(err);
-    reply("❌ Error aagya baji, try again.");
+    reply(`📋 *Image Text:*\n\n${text}`);
+
+  } catch (e) {
+    console.log(e);
+    reply("❌ Error hogya baji.");
   }
 });
