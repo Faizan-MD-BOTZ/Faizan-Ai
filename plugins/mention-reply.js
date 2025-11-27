@@ -27,7 +27,7 @@ cmd({
 
     if (m.mentionedJid.includes(botNumber)) {
       const thumbnailRes = await axios.get(
-        config.MENU_IMAGE_URL || "https://files.catbox.moe/l8pgsf.jpg",
+        config.MENU_IMAGE_URL || "https://files.catbox.moe/ejufwa.jpg",
         { responseType: 'arraybuffer' }
       );
 
