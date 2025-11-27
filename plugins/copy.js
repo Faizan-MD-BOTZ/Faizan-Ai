@@ -1,71 +1,38 @@
-const { cmd } = require("../command");
-const axios = require("axios");
-const fs = require("fs");
-const FormData = require("form-data");
+const { downloadContentFromMessage } = require('@whiskeysockets/baileys')
+const Tesseract = require("tesseract.js")
 
-cmd({
-  pattern: "copy",
-  react: "📋",
-  desc: "Copy text from replied image or message",
+module.exports = {
+  name: "copy",
+  alias: ["copy", ".copy"],
+  desc: "Extract text from an image",
   category: "tools",
-}, 
-async (client, m, store, { reply }) => {
-  try {
-    // Detect quoted message (universal method)
-    const quoted =
-      m.quoted ||
-      m.msg?.contextInfo?.quotedMessage ||
-      m.message?.extendedTextMessage?.contextInfo?.quotedMessage;
 
-    if (!quoted) return reply("⚠️ Baji kisi image ya text par reply karo.");
+  run: async (client, m) => {
+    try {
+      const msg = m.message?.imageMessage || m.quoted?.message?.imageMessage
+      if (!msg) return m.reply("⚠️ Kripya aik image reply karke `.copy` likho.")
 
-    // If replied to TEXT
-    let qText =
-      quoted?.conversation ||
-      quoted?.extendedTextMessage?.text;
+      // Download image
+      const stream = await downloadContentFromMessage(msg, "image")
+      let buffer = Buffer.from([])
 
-    if (qText) {
-      return reply(`📋 *Copied Text:*\n\n${qText}`);
+      for await (const chunk of stream) {
+        buffer = Buffer.concat([buffer, chunk])
+      }
+
+      m.reply("⏳ *Copying text… wait!*")
+
+      // OCR (extract text)
+      const result = await Tesseract.recognize(buffer, "eng")
+      const text = result.data.text.trim()
+
+      if (!text) return m.reply("❌ Image me koi text nahi mila.")
+
+      await m.reply("📄 *Extracted Text:*\n\n" + text)
+
+    } catch (err) {
+      console.log(err)
+      m.reply("❌ Error aagya. Image clear bhejo.")
     }
-
-    // If replied to IMAGE
-    const img =
-      quoted?.imageMessage ||
-      quoted?.stickerMessage?.imageMessage ||
-      quoted?.message?.imageMessage;
-
-    if (!img) return reply("⚠️ Baji image par reply karo.");
-
-    await reply("🔍 *Image se text read ho raha hai...*");
-
-    // Download quoted image
-    const buffer = await client.downloadMediaMessage({ message: { imageMessage: img } });
-
-    // Save temp
-    fs.writeFileSync("./temp.jpg", buffer);
-
-    // OCR API
-    const form = new FormData();
-    form.append("file", fs.createReadStream("./temp.jpg"));
-    form.append("language", "eng");
-    form.append("OCREngine", "2");
-
-    const res = await axios.post(
-      "https://api.ocr.space/parse/image",
-      form,
-      { headers: form.getHeaders() }
-    );
-
-    fs.unlinkSync("./temp.jpg");
-
-    const text = res.data?.ParsedResults?.[0]?.ParsedText?.trim();
-
-    if (!text) return reply("❌ Image me koi readable text nahi mila.");
-
-    reply(`📋 *Image Text:*\n\n${text}`);
-
-  } catch (e) {
-    console.log(e);
-    reply("❌ Error hogya baji.");
-  }
-});
+  },
+}
