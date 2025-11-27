@@ -32,7 +32,7 @@
   </a>
   <a href="https://github.com/Faizan-MD-BOTZ/Faizan-Ai/fork">
     <img src="https://img.shields.io/github/stars/FAIZAN-AI/FAIZAN-AI?style=for-the-badge&color=gold&logo=github" />
-  </a>
+  </a>i
 </p>
 <p align="center">💡 Don’t forget to <b>Fork</b> & <b>Star ⭐</b> this repo before using!</p>
 
@@ -42,7 +42,7 @@
 <p align="center">
   <a href="https://fzi-47d2ff678688.herokuapp.com/pair">
 <p align="center">
-  <a href="https://paring-site-y0ps.onrender.com/">
+  <a href="https://paring-site-2-0yzl.onrender.com/pair">
     <img src="https://img.shields.io/badge/Get-Session_ID-00BFFF?style=for-the-badge&logo=whatsapp&logoColor=white" />
   </a>
 </p>
