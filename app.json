@@ -1,7 +1,7 @@
 {
   "name": "FAIZAN-AI",
   "description": "Javascript WhatsApp bot made by FAIZAN JUTT",
-  "logo": "https://i.ibb.co/9mdHyGDL/shaban-md.jpg",
+  "logo": "https://files.catbox.moe/ejufwa.jpg",
   "keywords": ["FAIZAN-AI"],
   "success_url": "/",
 
@@ -85,7 +85,7 @@
     "OWNER_NAME": {
       "description": "Type Bot Owner Name.",
       "required": false,
-      "value": "*FAIZAN JUTT*"
+      "value": "*𝐅𝐀𝐈𝐙𝐀𝐍-𝐉𝐮𝐭𝐭*"
 }, 
 
     "OWNER_NUMBER": {
@@ -131,13 +131,13 @@
     "MENU_IMAGE_URL": {
       "description": "add url for mention reply and menu if want.",
       "required": false,
-      "value": "https://i.ibb.co/9mdHyGDL/shaban-md.jpg"
+      "value": "https://files.catbox.moe/ejufwa.jpg"
     },
     
      "DESCRIPTION": {
       "description": "add caption for menu and other",
       "required": false,
-      "value": "*© ᴘᴏᴡᴇʀᴇᴅ ʙʏ FAIZAN JUTT ❣️*"
+      "value": "*© ᴘᴏᴡᴇʀᴇᴅ ʙʏ 𝐅𝐀𝐈𝐙𝐀𝐍-𝐀𝐈 ❣️*"
     },
 
       "DELETE_LINKS": {
@@ -149,13 +149,13 @@
     "AUTO_RECORDING": {
       "description": "Make it true if you want auto recoding.",
       "required": false,
-      "value": "true"
+      "value": "false"
     },
 
     "AUTO_TYPING": {
       "description": "Make it true if you want auto typing.",
       "required": false,
-      "value": "true"
+      "value": "false"
     },
 
     "AUTO_REACT": {
