@@ -42,13 +42,13 @@ cmd({
           forwardingScore: 999,
           isForwarded: true,
           externalAdReply: {
-            title: config.BOT_NAME || "REDZONE-MD 🥀",
-            body: config.DESCRIPTION || "𝐑𝐄𝐃𝐙𝐎𝐍𝐄-𝐌𝐃 🤌💗",
+            title: config.BOT_NAME || "FAIZAN- MD 🥀",
+            body: config.DESCRIPTION || "𝐅𝐀𝐈𝐙𝐀𝐍-𝐌𝐃 🤌💗",
             mediaType: 1,
             renderLargerThumbnail: true,
             thumbnail: thumbnailBuffer,
-            mediaUrl: "https://files.catbox.moe/l8psgf.jpg", // Static image URL
-            sourceUrl: "https://wa.me/message/923235906096",
+            mediaUrl: "https://files.catbox.moe/ejufwa.jpg", // Static image URL
+            sourceUrl: "https://wa.me/message/923266105873",
             showAdAttribution: true
           }
         }
