@@ -54,7 +54,7 @@ async (conn, mek, m, { from, reply, sender, args }) => {
             from,
             {
                 image: { 
-                    url: movie.poster && movie.poster !== 'N/A' ? movie.poster : 'https://files.catbox.moe/l8psgf.jpg'
+                    url: movie.poster && movie.poster !== 'N/A' ? movie.poster : 'https://files.catbox.moe/ejufwa.jpg'
                 },
                 caption: dec,
                 contextInfo: {
@@ -62,8 +62,8 @@ async (conn, mek, m, { from, reply, sender, args }) => {
                     forwardingScore: 999,
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
-                        newsletterJid: '120363418906972955@newsletter',
-                        newsletterName: '𝐑𝐄𝐃𝐙𝐎𝐍𝐄-𝐌𝐃',
+                        newsletterJid: '120363421896999345@newsletter',
+                        newsletterName: '𝐅𝐀𝐈𝐙𝐀𝐍-𝐌𝐃',
                         serverMessageId: 143
                     }
                 }
