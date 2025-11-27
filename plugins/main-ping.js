@@ -3,16 +3,16 @@ const { cmd, commands } = require('../command');
 
 // Array of different fancy text styles for QADEER-AI
 const botNameStyles = [
-    "𝘙𝘌𝘋𝘡𝘖𝘕𝘌-𝘔𝘋",
-    "𝚁𝙴𝙳𝚉𝙾𝙽𝙴-𝙼𝙳",
-    "🆁🅴🅳🆉🅾🅽🅴-🅼🅳",
-    "🅁🄴🄳🅉🄾🄽🄴-🄼🄳",
-    "ℝ𝔼𝔻ℤ𝕆ℕ𝔼-𝕄𝔻",
-    "𝑅𝐸𝒟𝒵𝒪𝒩𝐸-𝑀𝒟",
-    "ⓇⒺⒹⓏⓄⓃⒺ-ⓂⒹ",
-    "𝐑𝐄𝐃𝐙𝐎𝐍𝐄-𝐌𝐃",
-    "ＲＥＤＺＯＮＥ-ＭＤ",
-    "𝓡𝓔𝓓𝓩𝓞𝓝𝓔-𝓜𝓓"
+    "𝐅𝐚𝐢𝐳𝐚𝐧-𝐀𝐈",
+    "𝙁𝙖𝙞𝙯𝙖𝙣-𝘼𝙄",
+    "𝓕𝓪𝓲𝔃𝓪𝓷-𝓐𝓘",
+    "𝔉𝔞𝔦𝔷𝔞𝔫-𝔄𝔦",
+    "𝕱𝖆𝖎𝖟𝖆𝖓-𝕬𝖎",
+    "𝓕𝓪𝓲𝔃𝓪𝓷-𝓐𝓲",
+    "ℱ𝔸𝕀ℤ𝔸ℕ-𝔸𝕀",
+    "𝔉",
+    "𝓕𝓪𝓲𝔃𝓪𝓷-𝓐𝓲",
+    "𝐅𝐀𝐈𝐙𝐀𝐍-𝐀𝐈"
 ];
 
 // Track current style index
@@ -63,8 +63,8 @@ async (conn, mek, m, { from, quoted, sender, reply }) => {
                 forwardingScore: 999,
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                    newsletterJid: '120363418906972955@newsletter',
-                    newsletterName: "𝐑𝐄𝐃𝐙𝐎𝐍𝐄-𝐌𝐃",
+                    newsletterJid: '120363421896999345@newsletter',
+                    newsletterName: "𝐅𝐀𝐈𝐙𝐀𝐍-𝐀𝐈",
                     serverMessageId: 143
                 }
             }
@@ -90,7 +90,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
         const message = await conn.sendMessage(from, { text: '*PINGING...*' })
         const endTime = Date.now()
         const ping = endTime - startTime
-        await conn.sendMessage(from, { text: `*🔥 REDZONE-MD SPEED : ${ping}ms*` }, { quoted: message })
+        await conn.sendMessage(from, { text: `*🔥 𝐅𝐀𝐈𝐙𝐀𝐍-𝐀𝐈 SPEED : ${ping}ms*` }, { quoted: message })
     } catch (e) {
         console.log(e)
         reply(`${e}`)
