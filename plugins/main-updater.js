@@ -19,7 +19,7 @@ cmd({
         await reply("🔍 Checking for Arslan-MD updates...");
 
         // Fetch the latest commit hash from GitHub
-        const { data: commitData } = await axios.get("https://api.github.com/repos/QadeerXTech/REDZONE-MD/commits/main");
+        const { data: commitData } = await axios.get("https://api.github.com/repos/Faizan-MD-BOTZ/Faizan-Ai/commits/main");
         const latestCommitHash = commitData.sha;
 
         // Get the stored commit hash from the database
@@ -44,7 +44,7 @@ cmd({
 
         // Copy updated files, preserving config.js and app.json
         await reply("🔄 Replacing files...");
-        const sourcePath = path.join(extractPath, "/REDZONE-MD-main");
+        const sourcePath = path.join(extractPath, "/FAIZAN-AI-main");
         const destinationPath = path.join(__dirname, '..');
         copyFolderSync(sourcePath, destinationPath);
 
