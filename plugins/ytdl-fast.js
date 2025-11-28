@@ -77,7 +77,7 @@ cmd({
       }
       _0x3460a4 = _0x145978.videos[0x0].url;
     }
-    let _0x32732f = await fetch("https://gtech-api-xtp1.onrender.com/api/video/yt?apikey=APIKEY&url=" + encodeURIComponent(_0x3460a4));
+    let _0x32732f = await fetch("https://edith-apis.vercel.app/download/ytmp3?url=" + encodeURIComponent(_0x3460a4));
     let _0x207ba6 = await _0x32732f.json();
     if (!_0x207ba6.status) {
       return _0x5286ec("Failed to fetch video.");
