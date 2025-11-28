@@ -85,7 +85,7 @@
     "OWNER_NAME": {
       "description": "Type Bot Owner Name.",
       "required": false,
-      "value": "*𝐅𝐀𝐈𝐙𝐀𝐍-𝐉𝐮𝐭𝐭*"
+      "value": "*𝐅𝐀𝐈𝐙𝐀𝐍-𝐌𝐃*"
 }, 
 
     "OWNER_NUMBER": {
@@ -137,7 +137,7 @@
      "DESCRIPTION": {
       "description": "add caption for menu and other",
       "required": false,
-      "value": "*© ᴘᴏᴡᴇʀᴇᴅ ʙʏ 𝐅𝐀𝐈𝐙𝐀𝐍-𝐀𝐈 ❣️*"
+      "value": "*© ᴘᴏᴡᴇʀᴇᴅ ʙʏ 𝐅𝐀𝐈𝐙𝐀𝐍-𝐌𝐃 🤍*"
     },
 
       "DELETE_LINKS": {
