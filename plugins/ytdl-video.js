@@ -32,7 +32,7 @@ cmd({
         await reply("⏳ Downloading video...");
 
         // Use API to get video
-        const apiUrl = `https://apis.davidcyriltech.my.id/download/ytmp4?url=${encodeURIComponent(videoUrl)}`;
+        const apiUrl = `https://edith-apis.vercel.app/download/ytmp4?url=${encodeURIComponent(videoUrl)}`;
         const response = await fetch(apiUrl);
         const data = await response.json();
 
