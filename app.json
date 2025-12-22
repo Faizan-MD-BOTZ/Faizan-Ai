@@ -16,7 +16,7 @@
     "STICKER_NAME": {
       "description": "type your sticker pack name.",
       "required": false,
-      "value": "FAIZAN-AI"
+      "value": "𝐅𝐀𝐈𝐙𝐀𝐍-𝐌𝐃"
     }, 
       
     "PREFIX": {
@@ -98,7 +98,7 @@
     "BOT_NAME": {
       "description": "Type here the bot name.",
       "required": false,
-      "value": "FAIZAN-AI"
+      "value": "𝐅𝐀𝐈𝐙𝐀𝐍-𝐌𝐃"
 
       }, 
 
@@ -174,7 +174,7 @@
     "CUSTOM_REACT_EMOJIS": {
       "description": "put here custom react react emojis.",
       "required": true,
-      "value": "💝,💖,💗,❤️‍🩹,❤️,🧡,💛,💚,💙,💜,🤎,🖤,🤍"
+      "value": "💝,💖,💗,❤️‍🩹,❤️,🧡,💛,💚,💙,💜,🫀,🖤,🤍"
     }, 
     
     "ANTI_DEL_PATH": {
