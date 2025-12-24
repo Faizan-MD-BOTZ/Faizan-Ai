@@ -1,12 +1,12 @@
 {
-  "name": "BOSS-MD",
+  "name": "faizan-md",
   "version": "5.0.0",
-  "description": "Created By BOSS-MD Official",
+  "description": "Created By 𝐅𝐀𝐈𝐙𝐀𝐍-𝐌𝐃 Official",
   "main": "index.js",
   "scripts": {
-    "start": "pm2 start index.js --name Boss-MD",
-    "stop": "pm2 stop Boss-MD",
-    "restart": "pm2 restart Boss-MD",
+    "start": "pm2 start index.js --name FAIZAN-MD",
+    "stop": "pm2 stop FAIZAN-MD",
+    "restart": "pm2 restart FAIZAN-MD",
     "dev": "node index.js"
   },
   "dependencies": {
