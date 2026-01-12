@@ -44,7 +44,7 @@
 <p align="center">
   <a href="https://foji2-f2a7b605fb1f.herokuapp.com/pair">
 <p align="center">
-  <a href="https://foji2-f2a7b605fb1f.herokuapp.com/pair">
+  <a href="https://paring-site20-1.onrender.com/">
     <img src="https://img.shields.io/badge/Get-Session_ID-00BFFF?style=for-the-badge&logo=whatsapp&logoColor=white" />
   </a>
 </p>
