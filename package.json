@@ -9,7 +9,7 @@
     "restart": "pm2 restart FAIZAN-MD"
   },
   "dependencies": {
-    "@whiskeysockets/baileys": "7.0.0-rc.9",
+    "@whiskeysockets/baileys": "7.0.0-rc.6",
     "@adiwajshing/keyed-db": "^0.2.4",
     "@dark-yasiya/yt-dl.js": "1.0.5",
     "@ffmpeg-installer/ffmpeg": "^1.1.0",
@@ -48,10 +48,9 @@
     "sequelize": "^6.37.5",
     "sqlite3": "^5.1.7",
     "vm": "^0.1.0",
-    "api-dylux":"latest",
+    "api-dylux":"1.8.5",
     "@mrnima/tiktok-downloader":"1.0.0",
     "@mrnima/facebook-downloader":"1.0.0",
     "mrnima-moviedl":"1.0.0"
   }
 }
-
