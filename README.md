@@ -1,5 +1,5 @@
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
-<a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
+<a><img src='https://i.imgur.com/dBaSKWF.gif'/></a>
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 # 〘 𝐅𝐀𝐈𝐙𝐀𝐍-𝐌𝐃 〙  
 > ✨ *Ultra Pro Max WhatsApp Bot* ✨  
