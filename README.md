@@ -2,7 +2,6 @@
     </p>
 <img src="https://i.imgur.com/dBaSKWF.gif" height="100" width="100%">
 <p align='center'>
-    </p>
 <img src="https://i.imgur.com/dBaSKWF.gif" height="100" width="100%">
 <p align='center'>
     </p>
