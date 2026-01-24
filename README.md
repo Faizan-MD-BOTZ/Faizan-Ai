@@ -48,9 +48,9 @@
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 ## 🔑 𝙂𝙀𝙏 𝙎𝙀𝙎𝙎𝙄𝙊𝙉
 <p align="center">
-  <a href="https://foji2-f2a7b605fb1f.herokuapp.com/pair">
+  <a href="https://paring-site-1-sc4t.onrender.com/">
 <p align="center">
-  <a href="https://paring-site20-1.onrender.com/">
+  <a href="https://paring-site-1-sc4t.onrender.com/">
     <img src="https://img.shields.io/badge/Get-Session_ID-00BFFF?style=for-the-badge&logo=whatsapp&logoColor=white" />
   </a>
 </p>
