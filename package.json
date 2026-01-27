@@ -1,7 +1,7 @@
 {
   "name": "FAIZAN-MD",
   "version": "4.5.0",
-  "description": "A WhatsApp Bot Created by GuruTech",
+  "description": "A WhatsApp Bot Created by FAIZAN-MD",
   "main": "index.js",
   "scripts": {
     "start": "pm2 start index.js --deep-monitoring --attach --name FAIZAN-MD",
@@ -16,7 +16,7 @@
     "@mrnima/facebook-downloader": "1.0.0",
     "@mrnima/tiktok-downloader": "1.0.0",
     "@vitalets/google-translate-api": "^9.2.0",
-    "@whiskeysockets/baileys": "npm:gifted-baileys@2.0.0",
+    "@whiskeysockets/baileys": "7.0.0-rc.9",
     "adm-zip": "^0.5.16",
     "api-dylux": "1.8.5",
     "axios": "^1.2.5",
@@ -48,6 +48,6 @@
     "yt-search": "2.11.1",
     "ytdlp-nodejs": "^2.3.5"
   },
-  "author": "GuruTech",
+  "author": "FAIZAN-MD",
   "license": "ISC"
 }
