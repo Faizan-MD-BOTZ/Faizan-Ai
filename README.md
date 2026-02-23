@@ -60,7 +60,7 @@
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 ## 🚀 𝘿𝙀𝙋𝙇𝙊𝙔 𝙉𝙊𝙒
 <p align="center">
-  <a href="https://dashboard.heroku.com/new?template=https://github.com/Faizan-MD-BOTZ/Faizan-Ai">
+  <a href="https://dashboard.heroku.com/new?template=https://github.com/Faizan-MD007/Faizan-MD/tree/main">
     <img src="https://img.shields.io/badge/Deploy-Heroku-7952B3?style=for-the-badge&logo=heroku&logoColor=white" />
   </a>
 </p>
