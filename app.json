@@ -1,8 +1,8 @@
 {
-  "name": "FAIZAN-AI",
+  "name": "Faizan-md",
   "description": "Javascript WhatsApp bot made by FAIZAN JUTT",
   "logo": "https://files.catbox.moe/ejufwa.jpg",
-  "keywords": ["FAIZAN-AI"],
+  "keywords": ["FAIZAN-MD"],
   "success_url": "/",
 
     "stack": "container",
@@ -16,7 +16,7 @@
     "STICKER_NAME": {
       "description": "type your sticker pack name.",
       "required": false,
-      "value": "FAIZAN-AI"
+      "value": "𝐅𝐚𝐢𝐳𝐚𝐧-𝐌𝐃🪄🎀"
     }, 
       
     "PREFIX": {
@@ -34,7 +34,7 @@
 
      "ANTI_DELETE": {
       "description": "set true for show deleted messages.",
-      "required": false,
+      "required": true,
       "value": "true"  
     },
     
@@ -78,7 +78,7 @@
     "AUTO_STATUS_MSG": {
       "description": "Type custom message on status reply",
       "required": true,
-      "value": "*SEEN YOUR STATUS BY FAIZAN-AI 🖤*"
+      "value": "*SEEN YOUR STATUS BY FAIZAN-MD 🖤*"
    
      }, 
     
@@ -98,7 +98,7 @@
     "BOT_NAME": {
       "description": "Type here the bot name.",
       "required": false,
-      "value": "FAIZAN-AI"
+      "value": "𝐅𝐀𝐈𝐙𝐀𝐍-𝐌𝐃"
 
       }, 
 
@@ -125,7 +125,7 @@
    "MENTION_REPLY": {
       "description": "make it true if want mention reply if someone menetion you.",
       "required": false,
-      "value": "false"
+      "value": "true"
     },
     
     "MENU_IMAGE_URL": {
@@ -174,7 +174,7 @@
     "CUSTOM_REACT_EMOJIS": {
       "description": "put here custom react react emojis.",
       "required": true,
-      "value": "💝,💖,💗,❤️‍🩹,❤️,🧡,💛,💚,💙,💜,🤎,🖤,🤍"
+      "value": "🪄,💖,💗,❤️‍🩹,🫀,🧡,💛,💚,💙,💜,🤎,🖤,🤍"
     }, 
     
     "ANTI_DEL_PATH": {
