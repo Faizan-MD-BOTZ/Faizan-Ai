@@ -4,7 +4,7 @@
 <p align='center'>
 <img src="https://i.imgur.com/dBaSKWF.gif" height="100" width="100%">
 <p align='center'>
-<img src="https://i.imgur.com/dBaSKWF.gif" height="100" width="100%">
+<img src="https://i.imgur.com/dBaSKWF.gif" height="80" width="100%">
 
  〘 𝐅𝐀𝐈𝐙𝐀𝐍-𝐌𝐃 〙
  
