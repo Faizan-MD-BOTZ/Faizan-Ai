@@ -21,7 +21,7 @@
     "express": "latest",
     "buffer": "^6.0.3",
     "moment-timezone": "^0.6.0",
-    "axios": "^1.7.9",
+    "axios": "latest",
     "google-tts-api": "^2.0.2",
     "file_size_url": "1.0.6",
     "fs-extra": "^11.1.0",
