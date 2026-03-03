@@ -1,10 +1,10 @@
 <p align='center'>
-<img src="https://i.imgur.com/dBaSKWF.gif" height="100" width="100%">
+<img src="https://i.imgur.com/dBaSKWF.gif" height="60" width="70%">
         𝐅𝐀𝐈𝐙𝐀𝐍-𝐌𝐃
 <p align='center'>
-<img src="https://i.imgur.com/dBaSKWF.gif" height="100" width="100%">
+<img src="https://i.imgur.com/dBaSKWF.gif" height="70" width="80%">
 <p align='center'>
-<img src="https://i.imgur.com/dBaSKWF.gif" height="80" width="100%">
+<img src="https://i.imgur.com/dBaSKWF.gif" height="80" width="90%">
 
  〘 𝐅𝐀𝐈𝐙𝐀𝐍-𝐌𝐃 〙
  
