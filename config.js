@@ -31,7 +31,7 @@ MENU_IMAGE_URL: process.env.MENU_IMAGE_URL || "https://files.catbox.moe/ejufwa.j
 // add custom menu and mention reply image url
 PREFIX: process.env.PREFIX || ".",
 // add your prifix for bot   
-BOT_NAME: process.env.BOT_NAME || "𝐅𝐀𝐈𝐙𝐀𝐍-𝐌𝐃",
+BOT_NAME: process.env.BOT_NAME || "𝐅𝐀𝐈𝐙𝐀𝐍-𝐌𝐃 _⁸⁷³_ ",
 // add bot namw here for menu
 AUTO_STATUS_REACT: process.env.AUTO_STATUS_REACT || "true",
 // true to get auto status react
@@ -45,7 +45,7 @@ DELETE_LINKS: process.env.DELETE_LINKS || "false",
 // automatic delete links witho remove member 
 OWNER_NUMBER: process.env.OWNER_NUMBER || "923266105873",
 // add your bot owner number
-OWNER_NAME: process.env.OWNER_NAME || "𝐅𝐀𝐈𝐙𝐀𝐍-𝐌𝐃",
+OWNER_NAME: process.env.OWNER_NAME || "𝐅𝐀𝐈𝐙𝐀𝐍-𝐌𝐃 _⁸⁷³_ ",
 // add bot owner name
 DESCRIPTION: process.env.DESCRIPTION || "*©ᴘᴏᴡᴇʀᴇᴅ ʙʏ 𝐅𝐀𝐈𝐙𝐀𝐍-𝐀𝐈*",
 // add bot owner name    
