@@ -81,7 +81,7 @@
     "AUTO_TYPING": {
       "description": "Show typing indicator automatically (true/false).",
       "required": false,
-      "value": "true"
+      "value": "false"
     },
     
     "AUTO_RECORDING": {
