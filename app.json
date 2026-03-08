@@ -1,213 +1,201 @@
 {
-  "name": "Faizan-MD",
-  "description": "Javascript WhatsApp bot made by FAIZAN JUTT",
-  "logo": "https://files.catbox.moe/ejufwa.jpg",
-  "keywords": ["FAIZAN-MD"],
+  "name": "FAIZAN-MD⁸⁷³",
+  "description": "Javascript WhatsApp bot made by FAIZAN-MD⁸⁷³.",
+  "keywords": ["silva-spark-md", "whatsapp-bot", "baileys"],
   "success_url": "/",
-
-    "stack": "container",
+  "stack": "heroku-24",
+  
   "env": {
     "SESSION_ID": {
-      "description": "Put the session-id here.",
+      "description": "Put your session-id here (format: Silva~xxxxx).",
       "required": true,
       "value": ""
-    },  
+    },
     
-    "STICKER_NAME": {
-      "description": "type your sticker pack name.",
-      "required": false,
-      "value": "𝐅𝐚𝐢𝐳𝐚𝐧-𝐌𝐃🪄🎀"
-    }, 
-      
     "PREFIX": {
-      "description": "paste your bot prefix note! Don't apply null prefix.",
-      "required": false,
+      "description": "Bot command prefix (recommended: . or !) but you can use any.",
+      "required": true,
       "value": "."
     },
     
     "MODE": {
-      "description": "select your bot work type public-private-inbox-group.",
-      "required": false,
-      "value": "public"
-      
-    },
-
-     "ANTI_DELETE": {
-      "description": "set true for show deleted messages.",
+      "description": "Bot work mode: public, private, inbox, or groups.",
       "required": true,
-      "value": "true"  
+      "value": "public"
     },
     
-    "ALWAYS_ONLINE": {
-      "description": "Make it true if want always online.",
+    "BOT_NAME": {
+      "description": "Your bot's display name.",
       "required": false,
-      "value": "true"  
-    },    
-   
-    "AUTO_REPLY": {
-      "description": "Make it true if you want automatic reply.",
-      "required": false,
-      "value": "false"
-    }, 
-
-    "AUTO_STICKER": {
-      "description": "Make it true if you want automatic sticker.",
-      "required": false,
-      "value": "false"
-    }, 
-
-
-    "AUTO_STATUS_SEEN": {
-      "description": "Make it true for automatic status seen.",
-      "required": true,
-      "value": "true"
-    }, 
-
-    "AUTO_STATUS_REACT": {
-      "description": "make it true for automatic status reaction or like.",
-      "required": true,
-      "value": "true"
-    }, 
-
-    "AUTO_STATUS_REPLY": {
-      "description": "Make it true for auto reply msg on status seen.",
-      "required": true,
-      "value": "false"
-    }, 
-
-    "AUTO_STATUS_MSG": {
-      "description": "Type custom message on status reply",
-      "required": true,
-      "value": "*SEEN YOUR STATUS BY FAIZAN-MD 🖤*"
-   
-     }, 
+      "value": "𝐅𝐀𝐈𝐙𝐀𝐍-𝐌𝐃🪄🎀"
+    },
     
     "OWNER_NAME": {
-      "description": "Type Bot Owner Name.",
-      "required": false,
-      "value": "*𝐅𝐀𝐈𝐙𝐀𝐍-𝐌𝐃*"
-}, 
-
+      "description": "Bot owner's name.",
+      "required": true,
+      "value": "𝐅𝐀𝐈𝐙𝐀𝐍-𝐌𝐃🪄🎀"
+    },
+    
     "OWNER_NUMBER": {
-      "description": "put the owner number for bot.",
-      "required": false,
-      "value": "923266105873"
-
-    }, 
-
-    "BOT_NAME": {
-      "description": "Type here the bot name.",
-      "required": false,
-      "value": "𝐅𝐀𝐈𝐙𝐀𝐍-𝐌𝐃"
-
-      }, 
-
-    "ANTI_LINK": {
-      "description": "Make it true if you want bot auto remove group link.",
+      "description": "Bot owner's WhatsApp number (with country code, no +).",
       "required": true,
-      "value": "true"
-      
-    },
-
-     "ANTI_LINK_KICK": {
-      "description": "Make it true if you want bot auto remove group link.",
-      "required": true,
-      "value": "true"
-      
+      "value": "923408576674"
     },
     
-    "ANTI_BAD": {
-      "description": "Make it true if you want bot auto delete bad words.",
-      "required": false,
-      "value": "true"
-    },
-
-   "MENTION_REPLY": {
-      "description": "make it true if want mention reply if someone menetion you.",
-      "required": false,
-      "value": "true"
+    "DESCRIPTION": {
+      "description": "Bot description for menu and captions.",
+      "required": true,
+      "value": "*© ✦ FAIZAN-MD⁸⁷³ ✦*"
     },
     
-    "MENU_IMAGE_URL": {
-      "description": "add url for mention reply and menu if want.",
+    "ALIVE_IMG": {
+      "description": "Image URL for alive message.",
       "required": false,
       "value": "https://files.catbox.moe/ejufwa.jpg"
     },
     
-     "DESCRIPTION": {
-      "description": "add caption for menu and other",
-      "required": false,
-      "value": "*© ᴘᴏᴡᴇʀᴇᴅ ʙʏ 𝐅𝐀𝐈𝐙𝐀𝐍-𝐌𝐃 🤍*"
+    "LIVE_MSG": {
+      "description": "Custom alive message text.",
+      "required": true,
+      "value": "> FAIZAN-MD⁸⁷³ IS SPARKING ACTIVE AND ALIVE⚡"
     },
-
-      "DELETE_LINKS": {
-      "description": "remove links from group automatically without removing member",
+    
+    "ALWAYS_ONLINE": {
+      "description": "Keep bot always online (true/false).",
+      "required": true,
+      "value": "true"
+    },
+    
+    "PUBLIC_MODE": {
+      "description": "Enable public mode (true/false).",
+      "required": false,
+      "value": "true"
+    },
+    
+    "READ_MESSAGE": {
+      "description": "Auto-read all messages (true/false).",
+      "required": false,
+      "value": "false"
+    },
+    
+    "AUTO_TYPING": {
+      "description": "Show typing indicator automatically (true/false).",
       "required": false,
       "value": "true"
     },
     
     "AUTO_RECORDING": {
-      "description": "Make it true if you want auto recoding.",
+      "description": "Show recording indicator automatically (true/false).",
       "required": false,
       "value": "false"
     },
-
-    "AUTO_TYPING": {
-      "description": "Make it true if you want auto typing.",
-      "required": false,
-      "value": "false"
-    },
-
+    
     "AUTO_REACT": {
-      "description": "Make it true if you want react on every message.",
+      "description": "React to all messages automatically (true/false).",
+      "required": false,
+      "value": "false"
+    },
+    
+    "HEART_REACT": {
+      "description": "Only send ❤️ reactions (true/false).",
       "required": false,
       "value": "false"
     },
     
     "CUSTOM_REACT": {
-      "description": "Make it true if you want custom reactions.",
+      "description": "Use custom emoji reactions (true/false).",
       "required": false,
       "value": "false"
-      
-    }, 
+    },
     
     "CUSTOM_REACT_EMOJIS": {
-      "description": "put here custom react react emojis.",
+      "description": "Custom reaction emojis (comma-separated).",
+      "required": false,
+      "value": "💝,💖,💗,❤️‍🔥,❤️‍🩹,❤️,🩷,🧡,💛,💚,💙,🩵,💜,🤎,🖤,🩶,🤍"
+    },
+    
+    "AUTO_STATUS_SEEN": {
+      "description": "Auto-view all status updates (true/false).",
       "required": true,
-      "value": "🪄,💖,💗,❤️‍🩹,🫀,🧡,💛,💚,💙,💜,🤎,🖤,🤍"
-    }, 
+      "value": "true"
+    },
+    
+    "AUTO_STATUS_REACT": {
+      "description": "Auto-react to status updates (true/false).",
+      "required": true,
+      "value": "true"
+    },
+    
+    "AUTO_STATUS_REPLY": {
+      "description": "Auto-reply to status updates (true/false).",
+      "required": true,
+      "value": "false"
+    },
+    
+    "AUTO_STATUS__MSG": {
+      "description": "Custom message for status auto-reply.",
+      "required": true,
+      "value": "*🎉👀 Seen by FAIZAN-MD⁸⁷³ 🚀🔥*"
+    },
+    
+    "AUTO_VOICE": {
+      "description": "Send automatic voice replies (true/false).",
+      "required": true,
+      "value": "false"
+    },
+    
+    "AUTO_STICKER": {
+      "description": "Send automatic stickers (true/false).",
+      "required": true,
+      "value": "false"
+    },
+    
+    "AUTO_REPLY": {
+      "description": "Send automatic text replies (true/false).",
+      "required": true,
+      "value": "false"
+    },
+    
+    "ANTI_LINK": {
+      "description": "Block links and remove users in groups (true/false).",
+      "required": true,
+      "value": "false"
+    },
+    
+    "DELETE_LINKS": {
+      "description": "Delete links without removing members (true/false).",
+      "required": false,
+      "value": "false"
+    },
+    
+    "ANTI_BAD": {
+      "description": "Filter and delete bad words (true/false).",
+      "required": false,
+      "value": "false"
+    },
+    
+    "ANTI_DELETE": {
+      "description": "Forward deleted messages to owner (true/false).",
+      "required": true,
+      "value": "true"
+    },
     
     "ANTI_DEL_PATH": {
-      "description": "change it to -same- if you want to resend deleted message in same chat othwise inbox",
+      "description": "Where to send deleted messages: 'log' (owner) or 'same' (original chat).",
       "required": false,
-      "value": "inbox"
-    }, 
-
-    "ADMIN_EVENTS": {
-      "description": "make it true if want know who promote or demote a member .",
-      "required": false,
-      "value": "false"
+      "value": "log"
     },
-
-    "WELCOME": {
-      "description": "make it true if want goodbye and welcome message in groups.",
-      "required": false,
-      "value": "false"
-    },
-
-    "READ_MESSAGE": {
-      "description": "Make it true if you want bot read your all sms just now.",
-      "required": false,
+    
+    "ANTI_VV": {
+      "description": "Forward view-once messages to owner (true/false).",
+      "required": true,
       "value": "false"
     }
-
-},
-
-     "buildpacks": [
-        {
-            "url": "https://github.com/heroku/heroku-buildpack-nodejs.git"
-        }
-     ],
-  "stack": "heroku-24"
-}
+  },
   
+  "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-nodejs.git"
+    }
+  ]
+}
