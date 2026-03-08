@@ -99,7 +99,7 @@
     "HEART_REACT": {
       "description": "Only send ❤️ reactions (true/false).",
       "required": false,
-      "value": "false"
+      "value": "true"
     },
     
     "CUSTOM_REACT": {
