@@ -61,7 +61,13 @@
       "description": "Make it true for automatic status seen.",
       "required": true,
       "value": "true"
-    }, 
+    },
+      
+    "HEART_REACT": {
+      "description": "Only send ❤️ reactions (true/false).",
+      "required": false,
+      "value": "false"
+    },
 
     "AUTO_STATUS_REACT": {
       "description": "make it true for automatic status reaction or like.",
