@@ -4,6 +4,7 @@ if (fs.existsSync('config.env')) require('dotenv').config({ path: './config.env'
 function convertToBool(text, fault = 'true') {
     return text === fault ? true : false;
 }
+
 module.exports = {
 SESSION_ID: process.env.SESSION_ID || "",
 // add your Session Id 
@@ -33,8 +34,6 @@ PREFIX: process.env.PREFIX || ".",
 // add your prifix for bot   
 BOT_NAME: process.env.BOT_NAME || "𝐅𝐀𝐈𝐙𝐀𝐍-𝐌𝐃_⁸⁷³_",
 // add bot name here for menu
-AUTO_STATUS_REACT: process.env.AUTO_STATUS_REACT || "true",
-// true to get auto status react
 STICKER_NAME: process.env.STICKER_NAME || "𝐅𝐀𝐈𝐙𝐀𝐍-𝐌𝐃",
 // type sticker pack name 
 CUSTOM_REACT: process.env.CUSTOM_REACT || "false",
@@ -79,7 +78,7 @@ DEV: process.env.DEV || "923266105873",
 //replace with your whatsapp number        
 ANTI_VV: process.env.ANTI_VV || "true",
 // true for anti once view 
-AUTO_RECORDING: process.env.AUTO_RECORDING || "false"
+AUTO_RECORDING: process.env.AUTO_RECORDING || "false",
 // make it true for auto recoding 
 HEART_REACT: process.env.HEART_REACT || "false"
 // OWNER NUMBER REACT
