@@ -1,8 +1,8 @@
 {
-  "name": "Faizan-md",
-  "description": "Javascript WhatsApp bot made by FAIZAN JUTT",
+  "name": "FAIZAN-MD⁸⁷³",
+  "description": "Javascript WhatsApp bot made by 𝐸𝑅𝐹𝒜𝒩 𝒜𝐻𝑀𝒜𝒟",
   "logo": "https://files.catbox.moe/ejufwa.jpg",
-  "keywords": ["FAIZAN-MD"],
+  "keywords": ["FAIZAN-MD⁸⁷³"],
   "success_url": "/",
 
     "stack": "container",
@@ -16,7 +16,7 @@
     "STICKER_NAME": {
       "description": "type your sticker pack name.",
       "required": false,
-      "value": "𝐅𝐚𝐢𝐳𝐚𝐧-𝐌𝐃🪄🎀"
+      "value": "- _لا حاصل𓂃 ࣪ ִֶָ🥀⁸⁷³_"
     }, 
       
     "PREFIX": {
@@ -34,14 +34,14 @@
 
      "ANTI_DELETE": {
       "description": "set true for show deleted messages.",
-      "required": true,
+      "required": false,
       "value": "true"  
     },
     
     "ALWAYS_ONLINE": {
       "description": "Make it true if want always online.",
       "required": false,
-      "value": "true"  
+      "value": "false"  
     },    
    
     "AUTO_REPLY": {
@@ -61,13 +61,7 @@
       "description": "Make it true for automatic status seen.",
       "required": true,
       "value": "true"
-    },
-      
-    "HEART_REACT": {
-      "description": "Only send ❤️ reactions (true/false).",
-      "required": false,
-      "value": "false"
-    },
+    }, 
 
     "AUTO_STATUS_REACT": {
       "description": "make it true for automatic status reaction or like.",
@@ -91,13 +85,13 @@
     "OWNER_NAME": {
       "description": "Type Bot Owner Name.",
       "required": false,
-      "value": "*𝐅𝐀𝐈𝐙𝐀𝐍-𝐌𝐃*"
+      "value": "𝐅𝐀𝐈𝐙𝐀𝐍-𝐌𝐃🪄🎀"
 }, 
 
     "OWNER_NUMBER": {
       "description": "put the owner number for bot.",
       "required": false,
-      "value": "923266105873"
+      "value": "923408576674"
 
     }, 
 
@@ -114,24 +108,17 @@
       "value": "true"
       
     },
-
-     "ANTI_LINK_KICK": {
-      "description": "Make it true if you want bot auto remove group link.",
-      "required": true,
-      "value": "true"
-      
-    },
     
     "ANTI_BAD": {
       "description": "Make it true if you want bot auto delete bad words.",
       "required": false,
-      "value": "true"
+      "value": "false"
     },
 
    "MENTION_REPLY": {
       "description": "make it true if want mention reply if someone menetion you.",
       "required": false,
-      "value": "true"
+      "value": "false"
     },
     
     "MENU_IMAGE_URL": {
@@ -149,7 +136,7 @@
       "DELETE_LINKS": {
       "description": "remove links from group automatically without removing member",
       "required": false,
-      "value": "true"
+      "value": "false"
     },
     
     "AUTO_RECORDING": {
@@ -179,8 +166,8 @@
     
     "CUSTOM_REACT_EMOJIS": {
       "description": "put here custom react react emojis.",
-      "required": true,
-      "value": "🪄,💖,💗,❤️‍🩹,🫀,🧡,💛,💚,💙,💜,🤎,🖤,🤍"
+      "required": false,
+      "value": "💝,💖,💗,❤️‍🩹,❤️,🧡,💛,💚,💙,💜,🤎,🖤,🤍"
     }, 
     
     "ANTI_DEL_PATH": {
@@ -189,14 +176,20 @@
       "value": "inbox"
     }, 
 
-    "ADMIN_EVENTS": {
+    "ADMIN_ACTION": {
       "description": "make it true if want know who promote or demote a member .",
       "required": false,
       "value": "false"
     },
 
     "WELCOME": {
-      "description": "make it true if want goodbye and welcome message in groups.",
+      "description": "make it true if want welcome message in groups.",
+      "required": false,
+      "value": "false"
+    },
+
+    "GOODBYE": {
+      "description": "make it true if want goodbye message in groups.",
       "required": false,
       "value": "false"
     },
