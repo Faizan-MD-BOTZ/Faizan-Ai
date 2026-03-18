@@ -41,7 +41,7 @@ module.exports = {
     AUTO_RECORDING: process.env.AUTO_RECORDING || "false",      // Auto-record voice notes?
     AUTO_TYPING: process.env.AUTO_TYPING || "false",            // Show typing indicator?
     MENTION_REPLY: process.env.MENTION_REPLY || "false",   // reply on mentioned message 
-    MENU_IMAGE_URL: process.env.MENU_IMAGE_URL || "https://files.catbox.moe/ejufwa.jpg",  // Bot's "alive" menu mention image
+    MENU_IMAGE_URL: process.env.MENU_IMAGE_URL || "https://files.catbox.moe/mx8trl.jpg",  // Bot's "alive" menu mention image
 
     // ===== SECURITY & ANTI-FEATURES =====
     ANTI_DELETE: process.env.ANTI_DELETE || "true", // true antidelete to recover deleted messages 
