@@ -1,10 +1,9 @@
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
-                      𝐅𝐀𝐈𝐙𝐀𝐍-𝐌𝐃
-<a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
+    ✨ 𝐅𝐀𝐈𝐙𝐀𝐍-𝐌𝐃 ✨
+    <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
+  </span>
+</h1>
 
-<a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
-
- 〘 𝐅𝐀𝐈𝐙𝐀𝐍-𝐌𝐃 〙
  
 > ✨ *Ultra Pro Max WhatsApp Bot* ✨  
 <a href="https://github.com/Faizan-MD-BOTZ"><img title="Author" src="https://img.shields.io/badge/FAZI-MD-black?style=for-the-badge&logo=Github"></a> <a href="https://youtube.com/@arslanmdofficial"><img title="Author" src="https://img.shields.io/badge/YOUTUBE SUBSCRIBE-red?style=for-the-badge&logo=youtube"></a> <a href="https://wa.me/923266105873"><img title="Author" src="https://img.shields.io/badge/Contact Me-black?style=for-the-badge&logo=whatsapp"></a>
