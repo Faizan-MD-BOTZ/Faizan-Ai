@@ -22,6 +22,7 @@
     "@mrnima/tiktok-downloader": "1.0.0",
     "@mrnima/facebook-downloader": "1.0.0",
     "api-dylux": "1.8.5",
+    "api-qasim": "^3.2.10",
     "adm-zip": "^0.5.16",
     "axios": "^1.7.9",
     "better-sqlite3": "npm:libsql@0.5.12",
