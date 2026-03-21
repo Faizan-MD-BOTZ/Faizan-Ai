@@ -10,7 +10,7 @@
 <a href="https://github.com/Faizan-MD-BOTZ"><img title="Author" src="https://img.shields.io/badge/FAZI-MD-black?style=for-the-badge&logo=Github"></a> <a href="https://youtube.com/@arslanmdofficial"><img title="Author" src="https://img.shields.io/badge/YOUTUBE SUBSCRIBE-red?style=for-the-badge&logo=youtube"></a> <a href="https://wa.me/923266105873"><img title="Author" src="https://img.shields.io/badge/Contact Me-black?style=for-the-badge&logo=whatsapp"></a>
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 <h1 align="center">
-  <img src="https://files.catbox.moe/ejufwa.jpg" alt="𝐅𝐀𝐈𝐙𝐀𝐍-𝐌𝐃" width="800" style="border-radius:25px;box-shadow:0 0 30px violet;"/>
+  <img src="https://files.catbox.moe/ejufwa.jpg" alt="Hacker Kashi" width="800" style="border-radius:25px;box-shadow:0 0 30px violet;"/>
 </h1>
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 <h1 align="center">
@@ -26,7 +26,7 @@
 </h1>
 
 <p align="center">
-  <b>A multi-device WhatsApp bot created & maintained by <span style="color:#00FFFF">𝐅𝐀𝐈𝐙𝐀𝐍-𝐌𝐃</span> 🚀</b>
+  <b>A multi-device WhatsApp bot created & maintained by <span style="color:#00FFFF">Hacker Kashi</span> 🚀</b>
 </p>
 
 ---
