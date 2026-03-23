@@ -1,8 +1,8 @@
 {
-  "name": "FAIZAN-MD⁸⁷³",
-  "description": "Javascript WhatsApp bot made by 𝐅𝐀𝐈𝐙𝐀𝐍-𝐌𝐃⁸⁷³",
+  "name": "Faizan-md",
+  "description": "Javascript WhatsApp bot made by FAIZAN JUTT",
   "logo": "https://files.catbox.moe/ejufwa.jpg",
-  "keywords": ["FAIZAN-MD⁸⁷³"],
+  "keywords": ["FAIZAN-MD"],
   "success_url": "/",
 
     "stack": "container",
@@ -16,7 +16,7 @@
     "STICKER_NAME": {
       "description": "type your sticker pack name.",
       "required": false,
-      "value": "- _لا حاصل𓂃 ࣪ ִֶָ🥀⁸⁷³_"
+      "value": "𝐅𝐚𝐢𝐳𝐚𝐧-𝐌𝐃🪄🎀"
     }, 
       
     "PREFIX": {
@@ -34,14 +34,14 @@
 
      "ANTI_DELETE": {
       "description": "set true for show deleted messages.",
-      "required": false,
+      "required": true,
       "value": "true"  
     },
     
     "ALWAYS_ONLINE": {
       "description": "Make it true if want always online.",
       "required": false,
-      "value": "false"  
+      "value": "true"  
     },    
    
     "AUTO_REPLY": {
@@ -85,13 +85,13 @@
     "OWNER_NAME": {
       "description": "Type Bot Owner Name.",
       "required": false,
-      "value": "𝐅𝐀𝐈𝐙𝐀𝐍-𝐌𝐃🪄🎀"
+      "value": "*𝐅𝐀𝐈𝐙𝐀𝐍-𝐌𝐃*"
 }, 
 
     "OWNER_NUMBER": {
       "description": "put the owner number for bot.",
       "required": false,
-      "value": "923408576674"
+      "value": "923266105873"
 
     }, 
 
@@ -108,17 +108,24 @@
       "value": "true"
       
     },
+
+     "ANTI_LINK_KICK": {
+      "description": "Make it true if you want bot auto remove group link.",
+      "required": true,
+      "value": "true"
+      
+    },
     
     "ANTI_BAD": {
       "description": "Make it true if you want bot auto delete bad words.",
       "required": false,
-      "value": "false"
+      "value": "true"
     },
 
    "MENTION_REPLY": {
       "description": "make it true if want mention reply if someone menetion you.",
       "required": false,
-      "value": "false"
+      "value": "true"
     },
     
     "MENU_IMAGE_URL": {
@@ -136,7 +143,7 @@
       "DELETE_LINKS": {
       "description": "remove links from group automatically without removing member",
       "required": false,
-      "value": "false"
+      "value": "true"
     },
     
     "AUTO_RECORDING": {
@@ -166,8 +173,8 @@
     
     "CUSTOM_REACT_EMOJIS": {
       "description": "put here custom react react emojis.",
-      "required": false,
-      "value": "💝,💖,💗,❤️‍🩹,❤️,🧡,💛,💚,💙,💜,🤎,🖤,🤍"
+      "required": true,
+      "value": "🪄,💖,💗,❤️‍🩹,🫀,🧡,💛,💚,💙,💜,🤎,🖤,🤍"
     }, 
     
     "ANTI_DEL_PATH": {
@@ -176,20 +183,14 @@
       "value": "inbox"
     }, 
 
-    "ADMIN_ACTION": {
+    "ADMIN_EVENTS": {
       "description": "make it true if want know who promote or demote a member .",
       "required": false,
       "value": "false"
     },
 
     "WELCOME": {
-      "description": "make it true if want welcome message in groups.",
-      "required": false,
-      "value": "false"
-    },
-
-    "GOODBYE": {
-      "description": "make it true if want goodbye message in groups.",
+      "description": "make it true if want goodbye and welcome message in groups.",
       "required": false,
       "value": "false"
     },
