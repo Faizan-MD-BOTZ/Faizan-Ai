@@ -60,7 +60,7 @@ module.exports = {
     
     // ===== OWNER SETTINGS =====
     OWNER_NUMBER: process.env.OWNER_NUMBER || "923266105873",  // Owner's WhatsApp number
-    OWNER_NAME: process.env.OWNER_NAME || "*𝐅𝐀𝐈𝐙𝐀𝐍-𝐉𝐔𝐓𝐓❤️‍🩹*",  // Owner's name
+    OWNER_NAME: process.env.OWNER_NAME || "*𝐅𝐀𝐈𝐙𝐀𝐍-𝐉𝐔𝐓𝐓❤️‍🩹⁸⁷³*",  // Owner's name
     DEV: process.env.DEV || "923266105873",  // Developer's number
     
     // ===== DESCRIPTION =====
