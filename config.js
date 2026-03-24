@@ -13,7 +13,7 @@ module.exports = {
     SESSION_ID: process.env.SESSION_ID || "",  // Your bot's session ID (keep it secure)
     PREFIX: getConfig("PREFIX") || ".",  // Command prefix (e.g., "., / ! * - +")
     CHATBOT: getConfig("CHATBOT") || "on", // on/off chat bot 
-    BOT_NAME: process.env.BOT_NAME || getConfig("BOT_NAME") || "*𝐅𝐀𝐈𝐙𝐀𝐍-𝐌𝐃⁸⁷³*",  // Bot's display name
+    BOT_NAME: process.env.BOT_NAME || getConfig("BOT_NAME") || "*♡˚𝐅𝐀𝐈𝐙𝐀𝐍-𝐌𝐃⁸⁷³⋆𓏲̟*",  // Bot's display name
     MODE: getConfig("MODE") || process.env.MODE || "public",        // Bot mode: public/private/group/inbox
     REPO: process.env.REPO || "https://github.com/Faizan-MD-BOTZ/Faizan-Ai",  // Bot's GitHub repo
     BAILEYS: process.env.BAILEYS || "@whiskeysockets/baileys",  // Bot's BAILEYS
@@ -50,7 +50,7 @@ module.exports = {
     MENU_IMAGE_URL: process.env.MENU_IMAGE_URL || "https://files.catbox.moe/ejufwa.jpg",  // Menu image URL
     
     // ===== STICKER SETTINGS =====
-    STICKER_NAME: process.env.STICKER_NAME || "- _𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝙵𝚊𝚒𝚣𝚊𝚗-𝙼𝚍🫀𝙾𝚏𝚏𝚒𝚌𝚒𝚊𝚕_",  // Sticker pack name
+    STICKER_NAME: process.env.STICKER_NAME || "- _♡˚𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝙵𝚊𝚒𝚣𝚊𝚗-𝙼𝚍𝙵𝚊𝚒𝚣𝚊𝚗-𝙰𝚒🫀𝙾𝚏𝚏𝚒𝚌𝚒𝚊𝚕⋆𓏲̟_",  // Sticker pack name
     AUTO_STICKER: process.env.AUTO_STICKER || "false",  // Auto create stickers
     
     // ===== REACTION SETTINGS =====
@@ -60,11 +60,11 @@ module.exports = {
     
     // ===== OWNER SETTINGS =====
     OWNER_NUMBER: process.env.OWNER_NUMBER || "923266105873",  // Owner's WhatsApp number
-    OWNER_NAME: process.env.OWNER_NAME || "*𝐅𝐀𝐈𝐙𝐀𝐍-𝐉𝐔𝐓𝐓❤️‍🩹⁸⁷³*",  // Owner's name
+    OWNER_NAME: process.env.OWNER_NAME || "*⋆𓏲̟𝐅𝐀𝐈𝐙𝐀𝐍♡˚-𝐉𝐔𝐓𝐓⁸⁷³⋆𓏲̟*",  // Owner's name
     DEV: process.env.DEV || "923266105873",  // Developer's number
     
     // ===== DESCRIPTION =====
-    DESCRIPTION: process.env.DESCRIPTION || "- _©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝙵𝚊𝚒𝚣𝚊𝚗-𝙼𝚍🫀𝙾𝚏𝚏𝚒𝚌𝚒𝚊𝚕_",  // Bot description
+    DESCRIPTION: process.env.DESCRIPTION || "- _©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝙵𝚊𝚒𝚣𝚊𝚗-𝙼𝚍🫀𝙾𝚏𝚏𝚒𝚌𝚒𝚊𝚕⋆𓏲̟♡˚_",  // Bot description
     
     // ===== ALIVE SETTINGS =====
     ALIVE_IMG: process.env.ALIVE_IMG || "https://files.catbox.moe/ejufwa.jpg",  // Alive image URL
