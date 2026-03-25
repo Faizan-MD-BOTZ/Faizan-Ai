@@ -16,7 +16,7 @@
     "STICKER_NAME": {
       "description": "type your sticker pack name.",
       "required": false,
-      "value": "𝐅𝐚𝐢𝐳𝐚𝐧-𝐌𝐃🪄🎀"
+      "value": "- _♡˚𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝙵𝚊𝚒𝚣𝚊𝚗-𝙼𝚍🫀𝙾𝚏𝚏𝚒𝚌𝚒𝚊𝚕⋆𓏲̟_"
     }, 
       
     "PREFIX": {
@@ -85,7 +85,7 @@
     "OWNER_NAME": {
       "description": "Type Bot Owner Name.",
       "required": false,
-      "value": "*𝐅𝐀𝐈𝐙𝐀𝐍-𝐌𝐃*"
+      "value": "*⋆𓏲̟𝐅𝐀𝐈𝐙𝐀𝐍♡˚-𝐉𝐔𝐓𝐓⁸⁷³⋆𓏲̟*"
 }, 
 
     "OWNER_NUMBER": {
@@ -98,7 +98,7 @@
     "BOT_NAME": {
       "description": "Type here the bot name.",
       "required": false,
-      "value": "𝐅𝐀𝐈𝐙𝐀𝐍-𝐌𝐃"
+      "value": "♡˚𝐅𝐀𝐈𝐙𝐀𝐍-𝐌𝐃⁸⁷³⋆𓏲̟*"
 
       }, 
 
@@ -137,7 +137,7 @@
      "DESCRIPTION": {
       "description": "add caption for menu and other",
       "required": false,
-      "value": "*© ᴘᴏᴡᴇʀᴇᴅ ʙʏ 𝐅𝐀𝐈𝐙𝐀𝐍-𝐌𝐃 🤍*"
+      "value": "- _©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝙵𝚊𝚒𝚣𝚊𝚗-𝙼𝚍🫀𝙾𝚏𝚏𝚒𝚌𝚒𝚊𝚕⋆𓏲̟♡˚_"
     },
 
       "DELETE_LINKS": {
