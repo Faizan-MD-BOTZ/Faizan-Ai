@@ -50,7 +50,7 @@ module.exports = {
     MENU_IMAGE_URL: process.env.MENU_IMAGE_URL || "https://files.catbox.moe/ejufwa.jpg",  // Menu image URL
     
     // ===== STICKER SETTINGS =====
-    STICKER_NAME: process.env.STICKER_NAME || "- _♡˚𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝙵𝚊𝚒𝚣𝚊𝚗-𝙼𝚍𝙵𝚊𝚒𝚣𝚊𝚗-𝙰𝚒🫀𝙾𝚏𝚏𝚒𝚌𝚒𝚊𝚕⋆𓏲̟_",  // Sticker pack name
+    STICKER_NAME: process.env.STICKER_NAME || "- _♡˚𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝙵𝚊𝚒𝚣𝚊𝚗-𝙼𝚍🫀𝙾𝚏𝚏𝚒𝚌𝚒𝚊𝚕⋆𓏲̟_",  // Sticker pack name
     AUTO_STICKER: process.env.AUTO_STICKER || "false",  // Auto create stickers
     
     // ===== REACTION SETTINGS =====
