@@ -1,6 +1,6 @@
 {
   "name": "FAIZAN-MD⁸⁷³",
-  "version": "5.0.0",
+  "version": "6.0.0",
   "description": "A WhatsApp Bot Created By FAIZAN-MD⁸⁷³ ",
   "main": "index.js",
   "engines": {
@@ -13,7 +13,7 @@
     "restart": "pm2 restart FAIZAN-MD⁸⁷³"
   },
   "dependencies": {
-    "@whiskeysockets/baileys": "^v7.0.0-rc.9",
+    "@whiskeysockets/baileys": "7.0.0-rc.9",
     "@adiwajshing/keyed-db": "^0.2.4",
     "@dark-yasiya/yt-dl.js": "1.0.5",
     "@dark-yasiya/scrap": "1.0.1",
