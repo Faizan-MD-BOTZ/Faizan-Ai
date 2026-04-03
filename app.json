@@ -1,11 +1,10 @@
-{
-  "name": "Faizan-md",
-  "description": "Javascript WhatsApp bot made by FAIZAN JUTT",
-  "logo": "https://files.catbox.moe/ejufwa.jpg",
-  "keywords": ["FAIZAN-MD"],
+ {
+  "name": "FAIZAN-MD⁸⁷³",
+  "description": "Javascript WhatsApp bot made by FAIZAN-MD⁸⁷³",
+  "logo": "https://files.catbox.moe/npizv8.jpg",
+  "keywords": ["FAIZAN-MD⁸⁷³"],
   "success_url": "/",
-
-    "stack": "container",
+  "stack": "container",
   "env": {
     "SESSION_ID": {
       "description": "Put the session-id here.",
@@ -23,25 +22,36 @@
       "description": "paste your bot prefix note! Don't apply null prefix.",
       "required": false,
       "value": "."
+    }, 
+      
+    "ANTI_CALL": {
+      "description": "on anti call anyone not disturb you",
+      "required": false,
+      "value": "false"
+    },
+      
+    "AUTO_DOWNLOADER": {
+      "description": "AUTO DOWNLOADER . TIK,FB,YT ,ETC ",
+      "required": false,
+      "value": "false"
     },
     
     "MODE": {
       "description": "select your bot work type public-private-inbox-group.",
       "required": false,
       "value": "public"
-      
     },
 
-     "ANTI_DELETE": {
+    "ANTI_DELETE": {
       "description": "set true for show deleted messages.",
-      "required": true,
+      "required": false,
       "value": "true"  
     },
     
     "ALWAYS_ONLINE": {
       "description": "Make it true if want always online.",
       "required": false,
-      "value": "true"  
+      "value": "false"  
     },    
    
     "AUTO_REPLY": {
@@ -56,7 +66,6 @@
       "value": "false"
     }, 
 
-
     "AUTO_STATUS_SEEN": {
       "description": "Make it true for automatic status seen.",
       "required": true,
@@ -66,7 +75,7 @@
     "AUTO_STATUS_REACT": {
       "description": "make it true for automatic status reaction or like.",
       "required": true,
-      "value": "true"
+      "value": "false"
     }, 
 
     "AUTO_STATUS_REPLY": {
@@ -78,54 +87,49 @@
     "AUTO_STATUS_MSG": {
       "description": "Type custom message on status reply",
       "required": true,
-      "value": "*SEEN YOUR STATUS BY FAIZAN-MD 🖤*"
-   
-     }, 
+      "value": "*SEEN YOUR STATUS BY FAIZAN-MD ❤️*"
+    }, 
     
     "OWNER_NAME": {
       "description": "Type Bot Owner Name.",
       "required": false,
-      "value": "*⋆𓏲̟𝐅𝐀𝐈𝐙𝐀𝐍♡˚-𝐉𝐔𝐓𝐓⁸⁷³⋆𓏲̟*"
-}, 
+      "value": "𝐅𝐀𝐈𝐙𝐀𝐍-𝐌𝐃"
+    }, 
 
     "OWNER_NUMBER": {
       "description": "put the owner number for bot.",
       "required": false,
-      "value": "923266105873"
-
+      "value": "923408576674"
     }, 
 
     "BOT_NAME": {
       "description": "Type here the bot name.",
       "required": false,
-      "value": "♡˚𝐅𝐀𝐈𝐙𝐀𝐍-𝐌𝐃⁸⁷³⋆𓏲̟*"
-
-      }, 
+      "value": "𝐅𝐀𝐈𝐙𝐀𝐍-𝐌𝐃"
+    }, 
 
     "ANTI_LINK": {
       "description": "Make it true if you want bot auto remove group link.",
       "required": true,
       "value": "true"
-      
     },
 
-     "ANTI_LINK_KICK": {
+    "ANTI_LINK_KICK": {
       "description": "Make it true if you want bot auto remove group link.",
       "required": true,
-      "value": "true"
-      
+      "value": "false"
     },
     
     "ANTI_BAD": {
       "description": "Make it true if you want bot auto delete bad words.",
       "required": false,
-      "value": "true"
+      "value": "false"
     },
 
-   "MENTION_REPLY": {
+    "MENTION_REPLY": {
       "description": "make it true if want mention reply if someone menetion you.",
       "required": false,
-      "value": "true"
+      "value": "false"
     },
     
     "MENU_IMAGE_URL": {
@@ -134,16 +138,16 @@
       "value": "https://files.catbox.moe/ejufwa.jpg"
     },
     
-     "DESCRIPTION": {
+    "DESCRIPTION": {
       "description": "add caption for menu and other",
       "required": false,
-      "value": "- _©𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝙵𝚊𝚒𝚣𝚊𝚗-𝙼𝚍🫀𝙾𝚏𝚏𝚒𝚌𝚒𝚊𝚕⋆𓏲̟♡˚_"
+      "value": "*- _♡˚𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝙵𝚊𝚒𝚣𝚊𝚗-𝙼𝚍🫀𝙾𝚏𝚏𝚒𝚌𝚒𝚊𝚕⋆𓏲̟_*"
     },
 
-      "DELETE_LINKS": {
+    "DELETE_LINKS": {
       "description": "remove links from group automatically without removing member",
       "required": false,
-      "value": "true"
+      "value": "false"
     },
     
     "AUTO_RECORDING": {
@@ -168,13 +172,12 @@
       "description": "Make it true if you want custom reactions.",
       "required": false,
       "value": "false"
-      
     }, 
     
     "CUSTOM_REACT_EMOJIS": {
       "description": "put here custom react react emojis.",
-      "required": true,
-      "value": "🪄,💖,💗,❤️‍🩹,🫀,🧡,💛,💚,💙,💜,🤎,🖤,🤍"
+      "required": false,
+      "value": "💝,💖,💗,❤️‍🩹,❤️,🧡,💛,💚,💙,💜,🤎,🖤,🤍"
     }, 
     
     "ANTI_DEL_PATH": {
@@ -200,10 +203,9 @@
       "required": false,
       "value": "false"
     }
+  },
 
-},
-
-     "buildpacks": [
+   "buildpacks": [
         {
             "url": "https://github.com/heroku/heroku-buildpack-nodejs.git"
         }
