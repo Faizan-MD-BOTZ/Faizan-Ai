@@ -78,14 +78,14 @@
     "AUTO_STATUS_MSG": {
       "description": "Type custom message on status reply",
       "required": true,
-      "value": "*SEEN YOUR STATUS BY FAIZAN-MD 🖤*"
+      "value": "*SEEN YOUR STATUS BY 𝐅αɪᴢαɴ-𝐌ᴅ⎯꯭̽*"
    
      }, 
     
     "OWNER_NAME": {
       "description": "Type Bot Owner Name.",
       "required": false,
-      "value": "*𝐅𝐀𝐈𝐙𝐀𝐍-𝐌𝐃*"
+      "value": "*𝐅αɪᴢαɴ-𝐌ᴅ⎯꯭̽🩷*"
 }, 
 
     "OWNER_NUMBER": {
@@ -98,7 +98,7 @@
     "BOT_NAME": {
       "description": "Type here the bot name.",
       "required": false,
-      "value": "𝐅𝐀𝐈𝐙𝐀𝐍-𝐌𝐃"
+      "value": "*𝐅αɪᴢαɴ-𝐌ᴅ⎯꯭̽*"
 
       }, 
 
@@ -137,7 +137,7 @@
      "DESCRIPTION": {
       "description": "add caption for menu and other",
       "required": false,
-      "value": "*© ᴘᴏᴡᴇʀᴇᴅ ʙʏ 𝐅𝐀𝐈𝐙𝐀𝐍-𝐌𝐃 🤍*"
+      "value": "> *𝐏σωєяє∂ 𝐁у 𝐅αɪᴢαɴ-𝐌ᴅ⎯꯭̽🩷*"
     },
 
       "DELETE_LINKS": {
