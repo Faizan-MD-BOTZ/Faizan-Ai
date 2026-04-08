@@ -13,7 +13,7 @@ AUTO_STATUS_REPLY: process.env.AUTO_STATUS_REPLY || "false",
 // make true if you want auto reply on status 
 AUTO_STATUS_REACT: process.env.AUTO_STATUS_REACT || "true",
 // make true if you want auto reply on status 
-AUTO_STATUS_MSG: process.env.AUTO_STATUS_MSG || "*SEEN YOUR STATUS BY 𝐅𝐀𝐈𝐙𝐀𝐍-𝐌𝐃 🇵🇰*",
+AUTO_STATUS_MSG: process.env.AUTO_STATUS_MSG || "*SEEN YOUR STATUS BY 𝐅αɪᴢαɴ-𝐌ᴅ⎯꯭̽ 🇵🇰*",
 // set the auto reply massage on status reply  
 ANTI_DELETE: process.env.ANTI_DELETE || "true",
 // set true false for anti delete     
@@ -31,11 +31,11 @@ MENU_IMAGE_URL: process.env.MENU_IMAGE_URL || "https://files.catbox.moe/ejufwa.j
 // add custom menu and mention reply image url
 PREFIX: process.env.PREFIX || ".",
 // add your prifix for bot   
-BOT_NAME: process.env.BOT_NAME || "𝐅𝐀𝐈𝐙𝐀𝐍-𝐌𝐃_⁸⁷³_",
+BOT_NAME: process.env.BOT_NAME || "*𝐅αɪᴢαɴ-𝐌ᴅ⎯꯭̽*",
 // add bot name here for menu
 AUTO_STATUS_REACT: process.env.AUTO_STATUS_REACT || "true",
 // true to get auto status react
-STICKER_NAME: process.env.STICKER_NAME || "𝐅𝐀𝐈𝐙𝐀𝐍-𝐌𝐃",
+STICKER_NAME: process.env.STICKER_NAME || "> *𝐏σωєяє∂ 𝐁у 𝐅αɪᴢαɴ-𝐌ᴅ⎯꯭̽*",
 // type sticker pack name 
 CUSTOM_REACT: process.env.CUSTOM_REACT || "false",
 // make this true for custum emoji react    
@@ -45,13 +45,13 @@ DELETE_LINKS: process.env.DELETE_LINKS || "false",
 // automatic delete links witho remove member 
 OWNER_NUMBER: process.env.OWNER_NUMBER || "923266105873",
 // add your bot owner number
-OWNER_NAME: process.env.OWNER_NAME || "𝐅𝐀𝐈𝐙𝐀𝐍-𝐌𝐃",
+OWNER_NAME: process.env.OWNER_NAME || "*𝐅αɪᴢαɴ-𝐌ᴅ⎯꯭̽*",
 // add bot owner name
-DESCRIPTION: process.env.DESCRIPTION || "*©ᴘᴏᴡᴇʀᴇᴅ ʙʏ 𝐅𝐀𝐈𝐙𝐀𝐍-𝐌𝐃*",
+DESCRIPTION: process.env.DESCRIPTION || "> *𝐏σωєяє∂ 𝐁у 𝐅αɪᴢαɴ-𝐌ᴅ⎯꯭̽🩷*",
 // add bot owner name    
 ALIVE_IMG: process.env.ALIVE_IMG || "https://files.catbox.moe/ejufwa.jpg",
 // add img for alive msg
-LIVE_MSG: process.env.LIVE_MSG || "> I'm alive*𝐅𝐀𝐈𝐙𝐀𝐍-𝐌𝐃*🇵🇰",
+LIVE_MSG: process.env.LIVE_MSG || "> I'm alive*𝐅αɪᴢαɴ-𝐌ᴅ⎯꯭̽*🇵🇰",
 // add alive msg here 
 READ_MESSAGE: process.env.READ_MESSAGE || "false",
 // Turn true or false for automatic read msgs
