@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Faizan MD — WhatsApp Bot Developer</title>
+  <meta name="description" content="Faizan MD ka professional mobile-friendly website jahan WhatsApp pairing link, bot GitHub repo, Faizan API aur services clean design ke sath available hain." />
+  <style>
+    :root{
+      --bg:#07111f;
+      --bg-soft:#0d1830;
+      --surface:rgba(255,255,255,.07);
+      --surface-strong:rgba(255,255,255,.1);
+      --text:#eef4ff;
+      --muted:#b5c6ef;
+      --line:rgba(255,255,255,.12);
+      --primary:#7c3aed;
+      --secondary:#06b6d4;
+      --success:#22c55e;
+      --warning:#f59e0b;
+      --shadow:0 25px 60px rgba(0,0,0,.35);
+      --radius:24px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      color:var(--text);
+      font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+      background:
+        radial-gradient(circle at 10% 10%, rgba(124,58,237,.28), transparent 28%),
+        radial-gradient(circle at 90% 5%, rgba(6,182,212,.18), transparent 25%),
+        radial-gradient(circle at 50% 100%, rgba(34,197,94,.12), transparent 30%),
+        linear-gradient(135deg, #07111f 0%, #0b1430 48%, #07111f 100%);
+      min-height:100vh;
+    }
+    a{color:inherit}
+    .container{width:min(1180px, calc(100% - 28px)); margin:0 auto}
+    .topbar{position:sticky; top:0; z-index:40; backdrop-filter:blur(18px); background:rgba(7,17,31,.62); border-bottom:1px solid rgba(255,255,255,.06)}
+    .nav{display:flex; align-items:center; justify-content:space-between; gap:16px; padding:14px 0}
+    .brand{display:flex; align-items:center; gap:12px; text-decoration:none}
+    .brand-mark{width:44px; height:44px; border-radius:16px; display:grid; place-items:center; font-weight:800; letter-spacing:.5px; background:linear-gradient(135deg, var(--primary), var(--secondary)); box-shadow:0 14px 30px rgba(124,58,237,.35)}
+    .brand-text strong{display:block; font-size:1rem}
+    .brand-text span{display:block; color:var(--muted); font-size:.84rem}
+    .nav-toggle{display:none; border:1px solid var(--line); background:rgba(255,255,255,.06); color:var(--text); border-radius:14px; padding:10px 14px; font-weight:700}
+    .nav-links{display:flex; align-items:center; gap:18px; flex-wrap:wrap}
+    .nav-links a{color:var(--muted); text-decoration:none; font-size:.96rem}
+    .nav-links a:hover{color:var(--text)}
+    .btn{display:inline-flex; align-items:center; justify-content:center; gap:10px; padding:14px 18px; border-radius:16px; text-decoration:none; font-weight:800; border:1px solid transparent; transition:.22s ease; min-height:48px}
+    .btn:hover{transform:translateY(-2px)}
+    .btn.primary{background:linear-gradient(135deg, var(--primary), var(--secondary)); color:white; box-shadow:0 18px 35px rgba(124,58,237,.28)}
+    .btn.secondary{background:rgba(255,255,255,.06); border-color:var(--line); color:var(--text)}
+    .btn.ghost{background:transparent; border-color:var(--line); color:var(--muted)}
+    .btn.small{padding:11px 14px; min-height:auto; border-radius:14px; font-size:.94rem}
+    .hero{display:grid; grid-template-columns:1.15fr .85fr; gap:26px; align-items:center; padding:48px 0 26px}
+    .panel{background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); box-shadow:var(--shadow)}
+    .hero-copy{padding:12px 0}
+    .eyebrow{display:inline-flex; align-items:center; gap:10px; margin-bottom:18px; padding:10px 14px; border-radius:999px; border:1px solid var(--line); background:rgba(255,255,255,.05); color:#d9e7ff; font-size:.92rem}
+    .eyebrow .dot{width:10px; height:10px; border-radius:50%; background:var(--success); box-shadow:0 0 16px rgba(34,197,94,.8)}
+    h1{margin:0 0 14px; line-height:1.02; font-size:clamp(2.35rem, 7vw, 5rem); letter-spacing:-.04em}
+    .gradient-text{background:linear-gradient(135deg, #c4b5fd, #67e8f9 55%, #86efac 100%); -webkit-background-clip:text; background-clip:text; color:transparent}
+    .lead{max-width:65ch; margin:0 0 22px; color:var(--muted); line-height:1.82; font-size:1.03rem}
+    .hero-actions, .inline-actions{display:flex; gap:12px; flex-wrap:wrap}
+    .mini-grid{display:grid; grid-template-columns:repeat(3, 1fr); gap:14px; margin-top:24px}
+    .mini-card{padding:18px; border-radius:20px; background:rgba(255,255,255,.05); border:1px solid var(--line)}
+    .mini-card strong{display:block; font-size:1.35rem; margin-bottom:7px}
+    .mini-card span{color:var(--muted); font-size:.93rem}
+    .hero-visual{padding:22px}
+    .console{border-radius:22px; overflow:hidden; border:1px solid rgba(255,255,255,.09); background:linear-gradient(180deg, rgba(8,12,24,.96), rgba(10,20,34,.88)); min-height:420px}
+    .console-top{display:flex; align-items:center; justify-content:space-between; gap:10px; padding:14px 16px; border-bottom:1px solid rgba(255,255,255,.08); background:rgba(255,255,255,.03)}
+    .dots{display:flex; gap:8px}
+    .dots span{width:10px; height:10px; border-radius:50%}
+    .console-body{padding:18px}
+    .terminal-line{padding:12px 14px; border-radius:16px; margin-bottom:12px; background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.06); color:#dbeafe; line-height:1.6; font-size:.95rem}
+    .chip-row{display:flex; flex-wrap:wrap; gap:10px; margin:16px 0 18px}
+    .chip{padding:9px 12px; border-radius:999px; background:rgba(124,58,237,.14); color:#ddd6fe; border:1px solid rgba(196,181,253,.18); font-size:.88rem}
+    .status-card{margin-top:18px; padding:18px; border-radius:20px; background:linear-gradient(135deg, rgba(124,58,237,.16), rgba(6,182,212,.12)); border:1px solid rgba(255,255,255,.08)}
+    .status-card p{margin:8px 0 0; color:var(--muted); line-height:1.7}
+    section{padding:28px 0}
+    .section-head{display:flex; align-items:end; justify-content:space-between; gap:16px; margin-bottom:18px}
+    .section-head h2{margin:0; font-size:1.95rem}
+    .section-head p{margin:6px 0 0; color:var(--muted); line-height:1.7}
+    .section-tag{display:inline-flex; padding:8px 12px; border-radius:999px; font-size:.86rem; background:rgba(255,255,255,.05); border:1px solid var(--line); color:#d9e7ff; margin-bottom:10px}
+    .cards-3, .links-grid{display:grid; gap:18px}
+    .cards-3{grid-template-columns:repeat(3, 1fr)}
+    .links-grid{grid-template-columns:repeat(3, 1fr)}
+    .card{padding:22px}
+    .card h3{margin:0 0 10px; font-size:1.15rem}
+    .card p{margin:0; color:var(--muted); line-height:1.78}
+    .card .pill{display:inline-flex; margin-bottom:12px; padding:8px 12px; border-radius:999px; font-size:.84rem; font-weight:700; border:1px solid rgba(255,255,255,.08); background:rgba(255,255,255,.05); color:#dbeafe}
+    .resource-card{position:relative; overflow:hidden; padding:22px; min-height:250px; background:linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.05)); border:1px solid var(--line); border-radius:26px; box-shadow:var(--shadow)}
+    .resource-card::after{content:""; position:absolute; right:-20px; bottom:-20px; width:130px; height:130px; border-radius:50%; background:radial-gradient(circle, rgba(103,232,249,.22), transparent 65%); pointer-events:none}
+    .resource-card h3{margin:0 0 10px; font-size:1.25rem}
+    .resource-card p{color:var(--muted); line-height:1.78; margin:0 0 18px}
+    .meta{display:flex; gap:10px; flex-wrap:wrap; margin-bottom:16px}
+    .meta span{padding:7px 10px; border-radius:999px; font-size:.82rem; color:#d9e7ff; background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.08)}
+    .about-layout{display:grid; grid-template-columns:1.05fr .95fr; gap:18px}
+    .timeline .step{display:flex; gap:14px; padding:16px 0; border-bottom:1px solid rgba(255,255,255,.06)}
+    .timeline .step:last-child{border-bottom:none; padding-bottom:0}
+    .step-index{flex:0 0 38px; height:38px; border-radius:12px; display:grid; place-items:center; background:linear-gradient(135deg, rgba(124,58,237,.25), rgba(6,182,212,.25)); font-weight:800}
+    .step h4{margin:0 0 6px}
+    .step p{margin:0; color:var(--muted); line-height:1.7}
+    .contact-card{display:grid; grid-template-columns:1.1fr .9fr; gap:18px; align-items:stretch}
+    .contact-main, .contact-side{padding:24px}
+    .contact-side ul{margin:0; padding-left:18px; color:var(--muted); line-height:1.85}
+    .footer{padding:22px 0 40px; color:var(--muted)}
+    .footer-wrap{display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; border-top:1px solid rgba(255,255,255,.08); padding-top:18px}
+    .badge-live{display:inline-flex; align-items:center; gap:10px; padding:10px 14px; border-radius:999px; background:rgba(34,197,94,.12); color:#bbf7d0; border:1px solid rgba(34,197,94,.2)}
+    @media (max-width: 980px){.hero, .about-layout, .contact-card{grid-template-columns:1fr}.cards-3, .links-grid{grid-template-columns:1fr 1fr}.mini-grid{grid-template-columns:1fr}}
+    @media (max-width: 760px){.nav{align-items:flex-start}.nav-toggle{display:inline-flex}.nav-links{display:none; width:100%; padding-top:10px; flex-direction:column; align-items:flex-start}.nav-links.open{display:flex}.hero{padding-top:26px}.section-head{flex-direction:column; align-items:flex-start}.cards-3, .links-grid{grid-template-columns:1fr}.hero-actions .btn, .inline-actions .btn{width:100%}.console{min-height:auto}}
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav">
+      <a class="brand" href="#home" aria-label="Faizan MD home">
+        <div class="brand-mark">FM</div>
+        <div class="brand-text">
+          <strong>Faizan MD</strong>
+          <span>WhatsApp Bot Developer</span>
+        </div>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu open karein">☰ Menu</button>
+      <nav class="nav-links" id="navLinks">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#resources">Links</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main class="container">
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="dot"></span> Professional live website for Faizan MD</div>
+        <h1>Apke bot brand ke liye <span class="gradient-text">clean, polished aur mobile-ready</span> web presence</h1>
+        <p class="lead">Yeh updated Faizan MD website ab zyada complete feel deti hai — pairing link, GitHub bot repository, Faizan API, services section, aur WhatsApp contact sab ek modern layout mein organize kiye gaye hain taa ke visitors ko foran samajh aaye ke project kya hai aur kahan se start karna hai.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="https://paring-site-44t7.onrender.com/" target="_blank" rel="noopener noreferrer">Open Pairing Link</a>
+          <a class="btn secondary" href="https://github.com/Faizan-MD-BOTZ/Faizan-Ai" target="_blank" rel="noopener noreferrer">View Bot GitHub</a>
+          <a class="btn ghost" href="#resources">See All Links</a>
+        </div>
+        <div class="mini-grid">
+          <div class="mini-card"><strong>Live Access</strong><span>Pairing portal aur API direct open links ke sath.</span></div>
+          <div class="mini-card"><strong>Mobile First</strong><span>Buttons, cards aur sections phone screen par bhi clean fit hote hain.</span></div>
+          <div class="mini-card"><strong>Brand Ready</strong><span>Faizan MD ko proper developer identity ke taur par present karta hai.</span></div>
+        </div>
+      </div>
+      <div class="hero-visual panel">
+        <div class="console">
+          <div class="console-top">
+            <div class="dots"><span style="background:#fb7185"></span><span style="background:#fbbf24"></span><span style="background:#34d399"></span></div>
+            <div class="badge-live" id="liveClock">Loading time...</div>
+          </div>
+          <div class="console-body">
+            <div class="terminal-line">$ brand --name "Faizan MD"<br>✓ Professional WhatsApp bot website loaded</div>
+            <div class="terminal-line">$ link --pairing<br>→ https://paring-site-44t7.onrender.com/</div>
+            <div class="terminal-line">$ repo --github<br>→ https://github.com/Faizan-MD-BOTZ/Faizan-Ai</div>
+            <div class="terminal-line">$ api --status<br>→ https://faizan-api.vercel.app/</div>
+            <div class="chip-row"><span class="chip">WhatsApp Pairing</span><span class="chip">Bot Repository</span><span class="chip">Faizan API</span><span class="chip">Responsive Design</span></div>
+            <div class="status-card"><strong>Website upgrade summary</strong><p>Layout ko zyada premium banaya gaya hai, quick-access resources add kiye gaye hain, services ko preserve karke better present kiya gaya hai, aur contact section ko WhatsApp channel ke around strong CTA ke sath maintain kiya gaya hai.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <div class="section-head">
+        <div><div class="section-tag">About Website</div><h2>Faizan MD ka complete intro section</h2><p>Developer identity, project links aur visitor-friendly structure ko ek hi jagah professional انداز mein show kiya gaya hai.</p></div>
+        <div class="badge-live" id="viewerInfo">Loading viewer info...</div>
+      </div>
+      <div class="about-layout">
+        <div class="panel card"><div class="pill">Why this version looks better</div><h3>Stronger structure with clear visitor flow</h3><p>Ab homepage sirf basic landing page nahi lagta. Hero se hi user ko pairing, repo aur API ke direct actions milte hain. Neeche services, resources, skills aur contact sections logically arranged hain taa ke site complete aur trustworthy feel de.</p></div>
+        <div class="panel card timeline"><div class="pill">Visitor Journey</div><div class="step"><div class="step-index">1</div><div><h4>Discover</h4><p>Hero section se brand aur main purpose instantly samajh aata hai.</p></div></div><div class="step"><div class="step-index">2</div><div><h4>Explore</h4><p>Services aur resources cards se visitors ko project access points mil jate hain.</p></div></div><div class="step"><div class="step-index">3</div><div><h4>Connect</h4><p>Contact section mein WhatsApp channel ko clear CTA ke sath preserve kiya gaya hai.</p></div></div></div>
+      </div>
+    </section>
+    <section id="services">
+      <div class="section-head"><div><div class="section-tag">Services</div><h2>Faizan MD ki core services</h2><p>Jo services pehle added thin unko preserve karke ab zyada clean aur balanced cards mein show kiya gaya hai.</p></div></div>
+      <div class="cards-3">
+        <div class="panel card"><div class="pill">WhatsApp Bots</div><h3>Custom Bot Development</h3><p>WhatsApp bot commands, plugin style formatting, config setup aur real-use automation workflows ke sath custom development support.</p></div>
+        <div class="panel card"><div class="pill">Bug Fixing</div><h3>Error Fix & Debugging</h3><p>Broken commands, crash issues, dependency conflicts, runtime errors aur stability problems ko trace karke practical fixes dena.</p></div>
+        <div class="panel card"><div class="pill">Developer Work</div><h3>Feature Development</h3><p>Naye features add karna, current repo improve karna, better flow build karna aur project ko zyada user-friendly banana.</p></div>
+        <div class="panel card"><div class="pill">UI Support</div><h3>Landing Page Design</h3><p>Bot brand ya personal identity ke liye stylish mobile-friendly website banana jo clean aur modern feel de.</p></div>
+        <div class="panel card"><div class="pill">Performance</div><h3>Code Cleanup</h3><p>Project structure ko organize karna, extra issues remove karna aur maintainable code flow create karna.</p></div>
+        <div class="panel card"><div class="pill">Setup Help</div><h3>Deployment Assistance</h3><p>Bot ya website ko usable hosting par ready karna taa ke open karte hi visitor ko proper live experience mile.</p></div>
+      </div>
+    </section>
+    <section id="resources">
+      <div class="section-head"><div><div class="section-tag">Quick Access Links</div><h2>Main project links ko design mein integrate kiya gaya</h2><p>Important resources ko alag highlighted cards mein rakha gaya hai taa ke visitor ko har important cheez easily mil jaye.</p></div></div>
+      <div class="links-grid">
+        <article class="resource-card"><div class="meta"><span>Live Link</span><span>Fast Start</span></div><h3>WhatsApp Pairing Portal</h3><p>Bot ko quickly pair karne ke liye direct access page. Isay homepage hero aur resources dono jagah se easily open kiya ja sakta hai.</p><a class="btn primary small" href="https://paring-site-44t7.onrender.com/" target="_blank" rel="noopener noreferrer">Open Pairing Site</a></article>
+        <article class="resource-card"><div class="meta"><span>Source Code</span><span>GitHub</span></div><h3>Faizan AI Bot Repository</h3><p>Source code, structure aur project updates dekhne ke liye official GitHub repo link yahan clearly available hai.</p><a class="btn secondary small" href="https://github.com/Faizan-MD-BOTZ/Faizan-Ai" target="_blank" rel="noopener noreferrer">Open GitHub Repo</a></article>
+        <article class="resource-card"><div class="meta"><span>API Access</span><span>Developer Ready</span></div><h3>Faizan API</h3><p>External integrations ya API testing ke liye Faizan API ka dedicated live link add kiya gaya hai taa ke website zyada complete lage.</p><a class="btn ghost small" href="https://faizan-api.vercel.app/" target="_blank" rel="noopener noreferrer">Open API Link</a></article>
+      </div>
+    </section>
+    <section id="skills">
+      <div class="section-head"><div><div class="section-tag">Skills</div><h2>Focused expertise</h2><p>WhatsApp bot ecosystem aur general development work ke liye practical skill highlights.</p></div></div>
+      <div class="cards-3">
+        <div class="panel card"><div class="pill">Bot Setup</div><h3>WhatsApp Bot Mastery</h3><p>Pairing flows, bot setup, commands structure, plugin style aur real-world usage patterns par strong grip.</p></div>
+        <div class="panel card"><div class="pill">Troubleshooting</div><h3>Error Handling</h3><p>Common bot issues, runtime failures, config mistakes aur dependency bugs ko quickly identify karke fix karna.</p></div>
+        <div class="panel card"><div class="pill">Development</div><h3>Feature Building</h3><p>New features add karna, existing flows improve karna, aur user-facing experience ko better banana.</p></div>
+      </div>
+    </section>
+    <section id="contact">
+      <div class="panel contact-card">
+        <div class="contact-main"><div class="section-tag">Contact</div><h2 style="margin:0 0 12px">Faizan MD se connect karein</h2><p style="margin:0 0 18px; color:var(--muted); line-height:1.82">Contact section ko WhatsApp channel ke sath preserve rakha gaya hai. Updates, announcements aur connection ke liye neeche diya gaya official link use karein.</p><div class="inline-actions"><a class="btn primary" href="https://whatsapp.com/channel/0029VbC4SGZLSmbRcz85AZ0d" target="_blank" rel="noopener noreferrer">Open WhatsApp Channel</a><a class="btn secondary" href="#home">Back to Top</a></div></div>
+        <div class="contact-side"><div class="pill">What visitors can do</div><ul><li>WhatsApp pairing portal open kar sakte hain</li><li>Official bot repository dekh sakte hain</li><li>Faizan API test ya access kar sakte hain</li><li>WhatsApp channel ke zariye updates follow kar sakte hain</li></ul></div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer"><div class="container footer-wrap"><div>© <span id="year"></span> Faizan MD — Professional live website</div><div class="badge-live">🟢 Optimized for mobile screens</div></div></footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    function updateClock(){const now = new Date(); const text = 'Local time: ' + now.toLocaleString('en-US', { dateStyle:'medium', timeStyle:'short' }); const clock = document.getElementById('liveClock'); if(clock) clock.textContent = text;}
+    updateClock(); setInterval(updateClock, 1000);
+    function updateViewerInfo(){const info = 'Screen: ' + window.innerWidth + '×' + window.innerHeight; const target = document.getElementById('viewerInfo'); if(target) target.textContent = info;}
+    updateViewerInfo(); window.addEventListener('resize', updateViewerInfo);
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+    navLinks.querySelectorAll('a').forEach(link => { link.addEventListener('click', () => navLinks.classList.remove('open')); });
+  </script>
+</body>
+</html>
