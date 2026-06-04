@@ -12,9 +12,9 @@ AUTO_STATUS_SEEN: process.env.AUTO_STATUS_SEEN || "true",
 AUTO_STATUS_REPLY: process.env.AUTO_STATUS_REPLY || "false",
 // make true if you want auto reply on status 
 AUTO_STATUS_REACT: process.env.AUTO_STATUS_REACT || "true",
-// make true if you want auto reply on status 
-AUTO_STATUS_MSG: process.env.AUTO_STATUS_MSG || "*SEEN YOUR STATUS BY 𝐅αɪᴢαɴ-𝐌ᴅ⎯꯭̽ 🇵🇰*",
-// set the auto reply massage on status reply  
+// true to get auto status react
+AUTO_STATUS_MSG: process.env.AUTO_STATUS_MSG || "*SEEN YOUR STATUS BY FAIZAN-MD* ",
+// set the auto reply massage on status reply 
 ANTI_DELETE: process.env.ANTI_DELETE || "true",
 // set true false for anti delete     
 ANTI_DEL_PATH: process.env.ANTI_DEL_PATH || "inbox", 
@@ -26,39 +26,39 @@ ADMIN_EVENTS: process.env.ADMIN_EVENTS || "false",
 ANTI_LINK: process.env.ANTI_LINK || "true",
 // make anti link true,false for groups 
 MENTION_REPLY: process.env.MENTION_REPLY || "false",
-// make true if want auto voice reply if someone menetion you 
+// make true if want auto voice reply if someone menention you 
 MENU_IMAGE_URL: process.env.MENU_IMAGE_URL || "https://files.catbox.moe/ejufwa.jpg",
 // add custom menu and mention reply image url
 PREFIX: process.env.PREFIX || ".",
 // add your prifix for bot   
-BOT_NAME: process.env.BOT_NAME || "*𝐅αɪᴢαɴ-𝐌ᴅ⎯꯭̽*",
+BOT_NAME: process.env.BOT_NAME || "*FAIZAN-MD*",
 // add bot name here for menu
-AUTO_STATUS_REACT: process.env.AUTO_STATUS_REACT || "true",
-// true to get auto status react
-STICKER_NAME: process.env.STICKER_NAME || "> *𝐏σωєяє∂ 𝐁у 𝐅αɪᴢαɴ-𝐌ᴅ⎯꯭̽*",
+STICKER_NAME: process.env.STICKER_NAME || "> *Powered By FAIZAN-MD*",
 // type sticker pack name 
 CUSTOM_REACT: process.env.CUSTOM_REACT || "false",
 // make this true for custum emoji react    
-CUSTOM_REACT_EMOJIS: process.env.CUSTOM_REACT_EMOJIS || "🪄,💖,💗,❤️‍🩹,🫀,🧡,💛,💚,💙,💜,🤎,🖤,🤍",
+CUSTOM_REACT_EMOJIS: process.env.CUSTOM_REACT_EMOJIS || "🪄,💖,💗,❤️‍🔥,🩹,🤸,💛,🤺,💙,💚,🎎,🌤,🎍",
 // chose custom react emojis by yourself 
 DELETE_LINKS: process.env.DELETE_LINKS || "false",
 // automatic delete links witho remove member 
 OWNER_NUMBER: process.env.OWNER_NUMBER || "923266105873",
 // add your bot owner number
-OWNER_NAME: process.env.OWNER_NAME || "*𝐅αɪᴢαɴ-𝐌ᴅ⎯꯭̽*",
+OWNER_NAME: process.env.OWNER_NAME || "*FAIZAN-MD*",
 // add bot owner name
-DESCRIPTION: process.env.DESCRIPTION || "> *𝐏σωєяє∂ 𝐁у 𝐅αɪᴢαɴ-𝐌ᴅ⎯꯭̽🩷*",
-// add bot owner name    
+DESCRIPTION: process.env.DESCRIPTION || "> *Powered By FAIZAN-MD*",
+// add bot description   
 ALIVE_IMG: process.env.ALIVE_IMG || "https://files.catbox.moe/ejufwa.jpg",
 // add img for alive msg
-LIVE_MSG: process.env.LIVE_MSG || "> I'm alive*𝐅αɪᴢαɴ-𝐌ᴅ⎯꯭̽*🇵🇰",
+LIVE_MSG: process.env.LIVE_MSG || "> I'm alive *FAIZAN-MD*",
 // add alive msg here 
 READ_MESSAGE: process.env.READ_MESSAGE || "false",
 // Turn true or false for automatic read msgs
 AUTO_REACT: process.env.AUTO_REACT || "false",
 // make this true or false for auto react on all msgs
 ANTI_BAD: process.env.ANTI_BAD || "true",
-// false or true for anti bad words  
+// true to enable anti bad word filter in groups
+ANTI_BAD_KICK: process.env.ANTI_BAD_KICK || "false",
+// true to kick member from group when they use bad words (requires ANTI_BAD=true)
 MODE: process.env.MODE || "public",
 // make bot public-private-inbox-group 
 ANTI_LINK_KICK: process.env.ANTI_LINK_KICK || "false",
