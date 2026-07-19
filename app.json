@@ -14,7 +14,7 @@
     "STICKER_NAME": {
       "description": "type your sticker pack name.",
       "required": false,
-      "value": "*Powered By FAIZAN-MD*"
+      "value": "> *𝐏σωєяє∂ 𝐁у 𝐅αɪᴢαɴ-𝐌ᴅ⎯꯭̽🩷*"
     },
     "PREFIX": {
       "description": "paste your bot prefix note! Don't apply null prefix.",
@@ -69,7 +69,7 @@
     "OWNER_NAME": {
       "description": "Type Bot Owner Name.",
       "required": false,
-      "value": "*FAIZAN-MD*"
+      "value": "*𝐅αɪᴢαɴ-𝐌ᴅ⎯꯭̽*"
     },
     "OWNER_NUMBER": {
       "description": "put the owner number for bot.",
@@ -79,7 +79,7 @@
     "BOT_NAME": {
       "description": "Type here the bot name.",
       "required": false,
-      "value": "*FAIZAN-MD*"
+      "value": "*𝐅αɪᴢαɴ-𝐌ᴅ⎯꯭̽*"
     },
     "ANTI_LINK": {
       "description": "Make it true if you want bot auto remove group link.",
@@ -114,7 +114,7 @@
     "DESCRIPTION": {
       "description": "add caption for menu and other",
       "required": false,
-      "value": "> *Powered By FAIZAN-MD*"
+      "value": "> *𝐏σωєяє∂ 𝐁у 𝐅αɪᴢαɴ-𝐌ᴅ⎯꯭̽🩷*"
     },
     "DELETE_LINKS": {
       "description": "remove links from group automatically without removing member",
@@ -144,7 +144,7 @@
     "CUSTOM_REACT_EMOJIS": {
       "description": "put here custom react emojis.",
       "required": true,
-      "value": "🪄,💖,💗,❤️‍🔥,🩹,🤸,💛,🤺,💙,💚,🎎,🌤,🎍"
+      "value": "🩷,💖,💗,❤️‍🔥,🫀,🩶,💛,🤍,💙,💚,❤️‍🩹,🖤,💜"
     },
     "ANTI_DEL_PATH": {
       "description": "change it to -same- if you want to resend deleted message in same chat otherwise inbox",
