@@ -31,21 +31,21 @@ MENU_IMAGE_URL: process.env.MENU_IMAGE_URL || "https://files.catbox.moe/ejufwa.j
 // add custom menu and mention reply image url
 PREFIX: process.env.PREFIX || ".",
 // add your prifix for bot   
-BOT_NAME: process.env.BOT_NAME || "*FAIZAN-MD*",
+BOT_NAME: process.env.BOT_NAME || "*𝐅αɪᴢαɴ-𝐌ᴅ⎯꯭̽*",
 // add bot name here for menu
-STICKER_NAME: process.env.STICKER_NAME || "> *Powered By FAIZAN-MD*",
+STICKER_NAME: process.env.STICKER_NAME || "> *𝐏σωєяє∂ 𝐁у 𝐅αɪᴢαɴ-𝐌ᴅ⎯꯭̽🩷*",
 // type sticker pack name 
 CUSTOM_REACT: process.env.CUSTOM_REACT || "false",
 // make this true for custum emoji react    
-CUSTOM_REACT_EMOJIS: process.env.CUSTOM_REACT_EMOJIS || "🪄,💖,💗,❤️‍🔥,🩹,🤸,💛,🤺,💙,💚,🎎,🌤,🎍",
+CUSTOM_REACT_EMOJIS: process.env.CUSTOM_REACT_EMOJIS || "🩶,💖,💗,❤️‍🔥,🫀,💜,💛,❤️‍🩹,💙,💚,🖤,🩵,🩷",
 // chose custom react emojis by yourself 
 DELETE_LINKS: process.env.DELETE_LINKS || "false",
 // automatic delete links witho remove member 
 OWNER_NUMBER: process.env.OWNER_NUMBER || "923266105873",
 // add your bot owner number
-OWNER_NAME: process.env.OWNER_NAME || "*FAIZAN-MD*",
+OWNER_NAME: process.env.OWNER_NAME || "**𝐅αɪᴢαɴ-𝐌ᴅ⎯꯭̽**",
 // add bot owner name
-DESCRIPTION: process.env.DESCRIPTION || "> *Powered By FAIZAN-MD*",
+DESCRIPTION: process.env.DESCRIPTION || "> *𝐏σωєяє∂ 𝐁у 𝐅αɪᴢαɴ-𝐌ᴅ⎯꯭̽🩷*",
 // add bot description   
 ALIVE_IMG: process.env.ALIVE_IMG || "https://files.catbox.moe/ejufwa.jpg",
 // add img for alive msg
